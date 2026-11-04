@@ -15,12 +15,12 @@ export default function Footer() {
       <div className="border-b border-white/5 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center space-x-4">
-            <div className="h-12 sm:h-14 w-auto p-2 rounded-2xl border border-gold-400/40 bg-white/95 flex items-center justify-center shadow-gold-glow">
+            <div className="h-12 sm:h-14 w-auto flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="Gaurav Estates - Comprehensive Real Estate Services"
-                width={1024}
-                height={606}
+                width={816}
+                height={461}
                 className="h-full w-auto object-contain"
               />
             </div>

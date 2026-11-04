@@ -41,9 +41,9 @@ export default function Preloader() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="relative flex flex-col items-center text-center px-6 max-w-sm w-full"
           >
-            {/* Logo Badge with subtle light backing */}
-            <div className="relative mb-6 p-4 rounded-2xl bg-white/95 border border-gold-400/40 shadow-gold-glow backdrop-blur-md overflow-hidden w-full max-w-[280px]">
-              <div className="relative aspect-[1024/606] w-full">
+            {/* Logo directly on dark preloader (no white box) */}
+            <div className="relative mb-6 p-2 overflow-hidden w-full max-w-[320px]">
+              <div className="relative aspect-[816/461] w-full">
                 <Image
                   src="/logo.png"
                   alt="Gaurav Estates Logo"
@@ -53,10 +53,10 @@ export default function Preloader() {
                 />
               </div>
               <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/30 to-transparent pointer-events-none"
+                initial={{ x: "-150%" }}
+                animate={{ x: "150%" }}
+                transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.4 }}
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/25 to-transparent pointer-events-none -skew-x-12"
               />
             </div>
 

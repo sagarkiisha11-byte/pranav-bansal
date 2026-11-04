@@ -77,14 +77,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Brand Logo with subtle light backing */}
+            {/* Brand Logo directly on dark navbar (no white box) */}
             <a href="#hero" className="flex items-center group py-0.5" aria-label="Gaurav Estates - Home">
-              <div className="relative h-11 sm:h-12 md:h-14 w-auto flex items-center bg-white/95 px-3 py-1.5 rounded-xl border border-gold-400/40 shadow-sm transition-transform group-hover:scale-105">
+              <div className="relative h-10 sm:h-11 md:h-[52px] lg:h-[56px] w-auto flex items-center transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
                   alt="Gaurav Estates - Comprehensive Real Estate Services"
-                  width={1024}
-                  height={606}
+                  width={816}
+                  height={461}
                   priority
                   className="h-full w-auto object-contain"
                 />
