@@ -88,7 +88,7 @@ export const siteContent = {
       googleMapsQuery: "Sector+9-D+Chandigarh",
     },
     hours: "Monday – Saturday: 9:30 AM – 7:30 PM | Sunday by VIP Appointment",
-    portraitImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85", // High-end professional consultant portrait placeholder
+    portraitImage: "/pranav-bansal.jpg", // High-end professional consultant portrait placeholder
     bio: [
       "With over a decade of dedicated market mastery, Pranav Bansal has established Gaurav Estates as the pinnacle of bespoke real estate advisory. Grounded in the enduring ethos that 'Good People Build Great Places', Pranav curates high-value residential homes, iconic commercial assets, and strategic land portfolios for discerning business leaders, NRIs, and forward-thinking families.",
       "Beyond mere brokerage, Pranav operates as a private wealth strategist. Every acquisition undergoes exhaustive title verification, market momentum audits, and cash-flow stress testing — turning real estate from an ordinary purchase into generational prosperity.",

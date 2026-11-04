@@ -156,7 +156,7 @@ export default function HeroSection() {
                 <div className="relative aspect-[4/5] w-full">
                   <Image
                     src={siteContent.consultant.portraitImage}
-                    alt={`${siteContent.consultant.name} - Real Estate Consultant`}
+                    alt="Pranav Bansal, Real Estate Consultant at Gaurav Estates"
                     fill
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
