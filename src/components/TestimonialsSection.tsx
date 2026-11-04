@@ -33,9 +33,9 @@ export default function TestimonialsSection() {
   const current = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="relative py-20 lg:py-28 bg-[#FAF7F2] border-t border-b border-gold-500/20 overflow-hidden">
+    <section id="testimonials" className="relative py-20 lg:py-28 bg-[#090B10] border-t border-b border-white/5 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-96 h-96 bg-gold-400/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-96 h-96 bg-gold-400/5 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -45,10 +45,10 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 mb-4 shadow-sm"
+            className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 mb-4"
           >
-            <MessageSquare className="w-3.5 h-3.5 text-gold-600" />
-            <span className="text-xs uppercase tracking-[0.2em] font-bold text-gold-700">
+            <MessageSquare className="w-3.5 h-3.5 text-gold-300" />
+            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-300">
               Client Testimonials
             </span>
           </motion.div>
@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1F3F] tracking-tight mb-4"
+            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4"
           >
             Endorsed by Leaders, Doctors &{" "}
             <span className="text-gold-gradient">HNI Investors</span>
@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-600 text-base sm:text-lg font-light leading-relaxed"
+            className="text-neutral-400 text-base sm:text-lg font-light leading-relaxed"
           >
             Real relationships built on trust, transparency, and exemplary outcomes.
           </motion.p>
@@ -81,9 +81,9 @@ export default function TestimonialsSection() {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border-2 border-gold-400/40 relative overflow-hidden shadow-xl min-h-[380px] flex flex-col justify-between">
+          <div className="glass-card rounded-3xl p-8 sm:p-12 border border-gold-400/25 relative overflow-hidden shadow-2xl min-h-[380px] flex flex-col justify-between">
             {/* Large Decorative Quote Icon */}
-            <Quote className="absolute top-6 right-8 w-24 h-24 text-gold-500/10 pointer-events-none" />
+            <Quote className="absolute top-6 right-8 w-24 h-24 text-gold-400/10 pointer-events-none" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -99,24 +99,24 @@ export default function TestimonialsSection() {
                   <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
                     <div className="flex items-center space-x-1">
                       {[...Array(current.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-gold-500 text-gold-500" />
+                        <Star key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
                       ))}
                     </div>
 
-                    <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-gold-500/15 text-gold-800 border border-gold-500/30">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gold-400/10 text-gold-300 border border-gold-400/25">
                       Transacted: {current.propertyType}
                     </span>
                   </div>
 
                   {/* Testimonial Quote */}
-                  <blockquote className="font-serif text-lg sm:text-2xl text-[#0B1F3F] font-normal italic leading-relaxed mb-8">
+                  <blockquote className="font-serif text-lg sm:text-2xl text-neutral-100 font-light italic leading-relaxed mb-8">
                     &ldquo;{current.content}&rdquo;
                   </blockquote>
                 </div>
 
                 {/* Author Info */}
-                <div className="flex items-center space-x-4 pt-6 border-t border-slate-100">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-gold-400 shrink-0 shadow-sm">
+                <div className="flex items-center space-x-4 pt-6 border-t border-white/10">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-gold-400/40 shrink-0">
                     <Image
                       src={current.avatar}
                       alt={current.name}
@@ -127,13 +127,13 @@ export default function TestimonialsSection() {
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-lg font-bold text-[#0B1F3F]">
+                    <h3 className="font-serif text-lg font-bold text-white">
                       {current.name}
                     </h3>
-                    <p className="text-xs text-gold-700 font-bold">
+                    <p className="text-xs text-gold-400 font-medium">
                       {current.role}
                     </p>
-                    <p className="text-[11px] text-slate-500">
+                    <p className="text-[11px] text-neutral-400">
                       {current.location}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ export default function TestimonialsSection() {
             </AnimatePresence>
 
             {/* Slider Navigation Buttons */}
-            <div className="flex items-center justify-between pt-8 border-t border-slate-100 mt-8">
+            <div className="flex items-center justify-between pt-8 border-t border-white/5 mt-8">
               {/* Dot Indicators */}
               <div className="flex items-center space-x-2">
                 {testimonials.map((_, idx) => (
@@ -151,8 +151,8 @@ export default function TestimonialsSection() {
                     onClick={() => setCurrentIndex(idx)}
                     className={`h-2 rounded-full transition-all ${
                       currentIndex === idx
-                        ? "w-8 bg-gold-500 shadow-sm"
-                        : "w-2 bg-slate-200 hover:bg-slate-400"
+                        ? "w-8 bg-gold-400"
+                        : "w-2 bg-obsidian-700 hover:bg-neutral-500"
                     }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
@@ -163,14 +163,14 @@ export default function TestimonialsSection() {
               <div className="flex items-center space-x-3">
                 <button
                   onClick={prevSlide}
-                  className="p-3 rounded-full border border-gold-400/40 bg-white text-[#0B1F3F] hover:bg-gold-500/15 hover:border-gold-500 transition-colors shadow-sm"
+                  className="p-3 rounded-full border border-gold-400/20 bg-obsidian-850 text-neutral-300 hover:text-white hover:border-gold-400/60 hover:bg-gold-400/10 transition-colors"
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="p-3 rounded-full border border-gold-400/40 bg-white text-[#0B1F3F] hover:bg-gold-500/15 hover:border-gold-500 transition-colors shadow-sm"
+                  className="p-3 rounded-full border border-gold-400/20 bg-obsidian-850 text-neutral-300 hover:text-white hover:border-gold-400/60 hover:bg-gold-400/10 transition-colors"
                   aria-label="Next testimonial"
                 >
                   <ChevronRight className="w-5 h-5" />

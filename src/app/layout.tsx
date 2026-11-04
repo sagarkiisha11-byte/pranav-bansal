@@ -18,8 +18,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0B1F3F",
-  colorScheme: "light dark",
+  themeColor: "#07080B",
+  colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -31,11 +31,10 @@ export const metadata: Metadata = {
     default: `${siteContent.consultant.name} | ${siteContent.brand.name} - ${siteContent.brand.tagline}`,
     template: `%s | ${siteContent.brand.name}`,
   },
-  description: `${siteContent.consultant.name}, premier Real Estate Consultant at ${siteContent.brand.name}. Comprehensive Real Estate Services for luxury residential properties, commercial spaces, freehold land & plots, and high-yield real estate investments. Call ${siteContent.consultant.phoneDisplay}.`,
+  description: `${siteContent.consultant.name}, premier Real Estate Consultant at ${siteContent.brand.name}. Expert advisory for luxury residential properties, commercial spaces, freehold land & plots, and high-yield real estate investments. Call ${siteContent.consultant.phoneDisplay}.`,
   keywords: [
     "Pranav Bansal",
     "Gaurav Estates",
-    "Comprehensive Real Estate Services",
     "Real Estate Consultant Chandigarh",
     "Luxury Residential Properties",
     "Commercial Spaces",
@@ -43,6 +42,7 @@ export const metadata: Metadata = {
     "Pre Leased Commercial",
     "Real Estate Investment Consultancy",
     "Buy Sell Invest Properties",
+    "High Yield Real Estate India",
   ],
   authors: [{ name: "Pranav Bansal" }, { name: "Gaurav Estates" }],
   creator: "Pranav Bansal",
@@ -50,19 +50,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: [
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
-  manifest: "/site.webmanifest",
   openGraph: {
-    title: `${siteContent.consultant.name} | ${siteContent.brand.name} - Comprehensive Real Estate Services`,
+    title: `${siteContent.consultant.name} | ${siteContent.brand.name} - Luxury Real Estate Consultant`,
     description: `Good People Build Great Places. Properties Today | Prosperity Tomorrow. Connect with ${siteContent.consultant.name} for prime residential, commercial, and investment advisory.`,
     url: "https://gauravestates.com",
     siteName: siteContent.brand.name,
@@ -70,18 +59,18 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
         width: 1200,
         height: 630,
-        alt: "Gaurav Estates - Comprehensive Real Estate Services - Pranav Bansal",
+        alt: "Gaurav Estates - Luxury Real Estate Consultancy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteContent.consultant.name} | ${siteContent.brand.name}`,
-    description: `Buy | Sell | Invest. Comprehensive Real Estate & Investment Advisory by ${siteContent.consultant.name}.`,
-    images: ["/og-image.png"],
+    description: `Buy | Sell | Invest. Luxury Real Estate & Investment Advisory by ${siteContent.consultant.name}.`,
+    images: ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80"],
   },
   robots: {
     index: true,
@@ -94,17 +83,21 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: siteContent.brand.name,
-  alternateName: "Gaurav Estates Comprehensive Real Estate Services",
+  alternateName: "Gaurav Estates Real Estate Consultancy",
   url: "https://gauravestates.com",
   logo: "https://gauravestates.com/logo.png",
-  image: "https://gauravestates.com/og-image.png",
-  description: `${siteContent.consultant.name} provides comprehensive real estate services under ${siteContent.brand.name}. Services include luxury residential, commercial SCOs and office towers, freehold land & plots, and high-yield real estate investments.`,
+  image: siteContent.consultant.portraitImage,
+  description: `${siteContent.consultant.name} provides premier real estate consultancy under ${siteContent.brand.name}. Services include luxury residential, commercial SCOs and office towers, freehold land & plots, and high-yield real estate investments.`,
   telephone: siteContent.consultant.phoneDisplay,
   email: siteContent.consultant.email,
   priceRange: "₹₹₹₹",
@@ -152,7 +145,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${playfair.variable} ${plusJakarta.variable} font-sans bg-[#F8F9FC] text-[#0B1F3F] antialiased selection:bg-gold-500/30 selection:text-navy-900`}
+        className={`${playfair.variable} ${plusJakarta.variable} font-sans bg-[#07080B] text-[#EDE8DF] antialiased selection:bg-gold-500/30 selection:text-white`}
       >
         {children}
       </body>

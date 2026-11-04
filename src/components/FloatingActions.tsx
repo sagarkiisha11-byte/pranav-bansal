@@ -9,11 +9,11 @@ export default function FloatingActions() {
       {/* Call Button Pill */}
       <a
         href={siteContent.consultant.phoneTel}
-        className="pointer-events-auto flex-1 py-3 px-4 rounded-2xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 text-[#061329] font-bold text-sm flex items-center justify-center space-x-2 shadow-2xl border-2 border-gold-300 active:scale-95 transition-transform"
+        className="pointer-events-auto flex-1 py-3 px-4 rounded-2xl bg-gradient-to-r from-gold-400 to-gold-500 text-obsidian-950 font-bold text-sm flex items-center justify-center space-x-2 shadow-2xl border border-gold-300/50 active:scale-95 transition-transform"
         aria-label="Call Pranav Bansal"
       >
         <div className="relative">
-          <Phone className="w-4 h-4 fill-[#061329]" />
+          <Phone className="w-4 h-4 fill-obsidian-950" />
           <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-white animate-ping" />
         </div>
         <span>Call Pranav</span>
@@ -24,7 +24,7 @@ export default function FloatingActions() {
         href={siteContent.consultant.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="pointer-events-auto flex-1 py-3 px-4 rounded-2xl bg-[#25D366] text-white font-bold text-sm flex items-center justify-center space-x-2 shadow-2xl border-2 border-emerald-300 active:scale-95 transition-transform"
+        className="pointer-events-auto flex-1 py-3 px-4 rounded-2xl bg-[#25D366] text-white font-bold text-sm flex items-center justify-center space-x-2 shadow-2xl border border-emerald-400 active:scale-95 transition-transform"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="w-4 h-4 fill-white" />

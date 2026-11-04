@@ -13,7 +13,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="relative py-20 lg:py-28 bg-[#F8F9FC] overflow-hidden border-b border-gold-500/20">
+    <section id="faq" className="relative py-20 lg:py-28 bg-[#07080B] overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -22,10 +22,10 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 mb-4 shadow-sm"
+            className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 mb-4"
           >
-            <HelpCircle className="w-3.5 h-3.5 text-gold-600" />
-            <span className="text-xs uppercase tracking-[0.2em] font-bold text-gold-700">
+            <HelpCircle className="w-3.5 h-3.5 text-gold-300" />
+            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-300">
               Clear Answers
             </span>
           </motion.div>
@@ -35,7 +35,7 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1F3F] tracking-tight mb-4"
+            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4"
           >
             Frequently Asked <span className="text-gold-gradient">Questions</span>
           </motion.h2>
@@ -45,7 +45,7 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-600 text-sm sm:text-base font-light"
+            className="text-neutral-400 text-sm sm:text-base font-light"
           >
             Everything you need to know about consulting, due diligence, and acquiring assets through Gaurav Estates.
           </motion.p>
@@ -62,19 +62,19 @@ export default function FAQSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-white rounded-2xl border border-gold-500/25 overflow-hidden shadow-sm hover:border-gold-500/50 transition-colors"
+                className="glass-card rounded-2xl border border-gold-400/20 overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => toggle(idx)}
                   className="w-full py-5 px-6 text-left flex items-center justify-between space-x-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg sm:text-xl font-bold text-[#0B1F3F] hover:text-gold-600 transition-colors">
+                  <span className="font-serif text-lg sm:text-xl font-medium text-white hover:text-gold-300 transition-colors">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full border border-gold-500/30 flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 bg-gold-500/20 text-gold-700" : "text-slate-500"
+                    className={`w-8 h-8 rounded-full border border-gold-400/30 flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 bg-gold-400/20 text-gold-300" : "text-neutral-400"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -88,7 +88,7 @@ export default function FAQSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed font-normal border-t border-slate-100"
+                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-neutral-300 leading-relaxed font-light border-t border-white/5"
                     >
                       {faq.answer}
                     </motion.div>
@@ -100,12 +100,12 @@ export default function FAQSection() {
         </div>
 
         {/* Still Have Questions Box */}
-        <div className="mt-12 p-6 rounded-2xl bg-[#0B1F3F] text-white border-2 border-gold-400/40 text-center flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+        <div className="mt-12 p-6 rounded-2xl bg-obsidian-850/80 border border-gold-400/20 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
             <h4 className="font-serif text-lg font-bold text-white">
               Have a distinct question about a specific sector or property?
             </h4>
-            <p className="text-xs text-slate-300 mt-1">
+            <p className="text-xs text-neutral-400 mt-1">
               Speak directly with Pranav Bansal without any obligations.
             </p>
           </div>
@@ -113,7 +113,7 @@ export default function FAQSection() {
           <div className="flex items-center space-x-3 shrink-0">
             <a
               href={`tel:${siteContent.consultant.phone}`}
-              className="btn-luxury-gold px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-2"
+              className="btn-luxury-gold px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center space-x-2"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Call Pranav</span>
@@ -122,7 +122,7 @@ export default function FAQSection() {
               href={siteContent.consultant.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl border border-emerald-500/40 bg-emerald-950/40 text-emerald-300 hover:bg-emerald-900/50 transition-colors"
+              className="p-2.5 rounded-xl border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 hover:bg-emerald-900/30 transition-colors"
               title="WhatsApp Chat"
             >
               <MessageCircle className="w-4 h-4" />

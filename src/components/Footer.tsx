@@ -10,40 +10,36 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#07152B] border-t-2 border-gold-500/30 text-slate-300 text-sm relative">
+    <footer className="bg-[#050608] border-t border-gold-400/15 text-neutral-400 text-sm relative">
       {/* Top Banner inside Footer */}
-      <div className="border-b border-white/10 py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo with Crisp White/Cream Backing for Perfect Legibility */}
-          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
-            <div className="p-3 sm:p-4 rounded-2xl bg-white border-2 border-gold-400/50 shadow-xl flex items-center justify-center">
-              <div className="relative h-12 sm:h-14 w-auto">
-                <Image
-                  src="/logo.png"
-                  alt="Gaurav Estates - Comprehensive Real Estate Services"
-                  width={1024}
-                  height={606}
-                  className="h-full w-auto object-contain"
-                />
-              </div>
+      <div className="border-b border-white/5 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center space-x-4">
+            <div className="h-12 sm:h-14 w-auto p-2 rounded-2xl border border-gold-400/40 bg-white/95 flex items-center justify-center shadow-gold-glow">
+              <Image
+                src="/logo.png"
+                alt="Gaurav Estates - Comprehensive Real Estate Services"
+                width={1024}
+                height={606}
+                className="h-full w-auto object-contain"
+              />
             </div>
-
             <div>
-              <p className="font-serif text-2xl font-bold text-white uppercase tracking-wider">
+              <p className="font-serif text-xl sm:text-2xl font-bold text-white uppercase tracking-wider">
                 {siteContent.brand.name}
               </p>
-              <p className="text-xs uppercase tracking-[0.25em] text-gold-300 font-semibold">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold">
                 {siteContent.brand.tagline}
               </p>
             </div>
           </div>
 
           <div className="text-center md:text-right">
-            <p className="font-serif italic text-lg text-gold-100 font-medium">
+            <p className="font-serif italic text-base sm:text-lg text-neutral-200">
               &ldquo;{siteContent.brand.slogans.secondary}&rdquo;
             </p>
-            <p className="text-xs text-slate-300 mt-1">
-              Principal Consultant: <strong className="text-gold-300 font-semibold">{siteContent.consultant.name}</strong> ({siteContent.consultant.phoneDisplay})
+            <p className="text-xs text-neutral-400 mt-0.5">
+              Principal Consultant: <strong className="text-gold-300">{siteContent.consultant.name}</strong> ({siteContent.consultant.phoneDisplay})
             </p>
           </div>
         </div>
@@ -57,21 +53,21 @@ export default function Footer() {
             <h4 className="font-serif text-lg font-bold text-white">
               About The Consultancy
             </h4>
-            <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed max-w-sm">
+            <p className="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed max-w-sm">
               Gaurav Estates is a boutique real estate consultancy headed by Pranav Bansal, dedicated to high-value residential homes, commercial hubs, freehold land, and pre-leased investments across the Tricity and North India corridors.
             </p>
-            <div className="pt-1 flex items-center space-x-2.5 text-xs text-gold-300 font-medium">
-              <ShieldCheck className="w-4 h-4 text-gold-400 shrink-0" />
+            <div className="pt-2 flex items-center space-x-3 text-xs text-gold-300">
+              <ShieldCheck className="w-4 h-4 text-gold-400" />
               <span>{siteContent.consultant.reraNumber}</span>
             </div>
-            <p className="font-serif italic text-xs text-slate-300">
+            <p className="font-serif italic text-xs text-neutral-400">
               &ldquo;{siteContent.brand.slogans.primary}&rdquo;
             </p>
           </div>
 
           {/* Quick Links (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-serif text-base font-bold text-gold-300 uppercase tracking-wider text-xs">
+            <h4 className="font-serif text-base font-bold text-white uppercase tracking-wider text-xs">
               Explore Portfolio
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
@@ -110,7 +106,7 @@ export default function Footer() {
 
           {/* Direct Contact (4 cols) */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="font-serif text-base font-bold text-gold-300 uppercase tracking-wider text-xs">
+            <h4 className="font-serif text-base font-bold text-white uppercase tracking-wider text-xs">
               Direct Contact
             </h4>
             <ul className="space-y-3 text-xs sm:text-sm">
@@ -118,7 +114,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-gold-400 shrink-0" />
                 <a
                   href={`tel:${siteContent.consultant.phone}`}
-                  className="text-white hover:text-gold-300 font-bold transition-colors"
+                  className="text-white hover:text-gold-300 font-semibold transition-colors"
                 >
                   {siteContent.consultant.phoneDisplay}
                 </a>
@@ -155,20 +151,20 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar: Copyright & Back to Top */}
-      <div className="border-t border-white/10 py-6 bg-[#040C1A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div className="border-t border-white/5 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
           <p>
             © {new Date().getFullYear()} {siteContent.brand.name}. All rights reserved. Consulting by{" "}
-            <strong className="text-white">{siteContent.consultant.name}</strong>.
+            <strong className="text-neutral-300">{siteContent.consultant.name}</strong>.
           </p>
 
-          <p className="text-[11px] text-slate-400 max-w-md text-center sm:text-right">
+          <p className="text-[11px] text-neutral-400 max-w-md text-center sm:text-right">
             Disclaimer: Real estate investments carry market risks. All listings, floor areas, and projected ROI figures are subject to final legal documentation and developer contracts.
           </p>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center space-x-2 text-gold-300 hover:text-white p-2 rounded-lg bg-[#0B1F3F] border border-gold-400/30 hover:border-gold-400/70 transition-colors shrink-0"
+            className="flex items-center space-x-2 text-gold-300 hover:text-white p-2 rounded-lg bg-obsidian-850 border border-gold-400/20 hover:border-gold-400/50 transition-colors shrink-0"
             aria-label="Back to top"
           >
             <span>Back to top</span>

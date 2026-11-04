@@ -15,9 +15,10 @@ export default function Preloader() {
       return;
     }
 
+    // Let preloader display for a short, elegant duration
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1800);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -28,21 +29,21 @@ export default function Preloader() {
         <motion.div
           key="preloader"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#07152B] text-white select-none overflow-hidden"
+          exit={{ opacity: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } }}
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#07080B] text-[#EDE8DF] select-none"
         >
           {/* Subtle ambient gold radial background */}
-          <div className="absolute inset-0 bg-radial-navy opacity-80 pointer-events-none" />
+          <div className="absolute inset-0 bg-radial-dark opacity-60 pointer-events-none" />
 
           <motion.div
-            initial={{ scale: 0.88, opacity: 0, y: 20 }}
+            initial={{ scale: 0.85, opacity: 0, y: 15 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex flex-col items-center text-center px-6 max-w-md w-full"
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="relative flex flex-col items-center text-center px-6 max-w-sm w-full"
           >
-            {/* Logo Card with Gold Border & Shimmer Sweep */}
-            <div className="relative p-6 sm:p-8 rounded-3xl bg-white/95 border-2 border-gold-400/50 shadow-2xl shadow-navy-950/80 mb-6 overflow-hidden w-full max-w-sm">
-              <div className="relative w-full aspect-[1024/606] flex items-center justify-center">
+            {/* Logo Badge with subtle light backing */}
+            <div className="relative mb-6 p-4 rounded-2xl bg-white/95 border border-gold-400/40 shadow-gold-glow backdrop-blur-md overflow-hidden w-full max-w-[280px]">
+              <div className="relative aspect-[1024/606] w-full">
                 <Image
                   src="/logo.png"
                   alt="Gaurav Estates Logo"
@@ -51,41 +52,51 @@ export default function Preloader() {
                   className="object-contain"
                 />
               </div>
-
-              {/* Gold Shimmer Sweep Across Logo */}
               <motion.div
-                initial={{ x: "-150%" }}
-                animate={{ x: "150%" }}
-                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.5 }}
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/35 to-transparent -skew-x-12 pointer-events-none"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/30 to-transparent pointer-events-none"
               />
             </div>
 
-            {/* Brand Name & Slogan */}
-            <motion.div
+            {/* Brand Name */}
+            <motion.h1
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="space-y-1.5"
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="font-serif text-3xl md:text-4xl font-bold tracking-widest text-gold-gradient uppercase mb-2"
             >
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-gold-gradient uppercase">
-                {siteContent.brand.name}
-              </h2>
-              <p className="text-xs sm:text-sm tracking-[0.25em] uppercase text-gold-300 font-semibold">
-                {siteContent.brand.tagline}
-              </p>
-              <p className="font-serif italic text-xs sm:text-sm text-slate-300 pt-1">
-                &ldquo;{siteContent.brand.slogans.primary}&rdquo;
-              </p>
-            </motion.div>
+              {siteContent.brand.name}
+            </motion.h1>
 
-            {/* Loading Bar with Gold Glow */}
-            <div className="w-48 h-[2px] bg-white/10 rounded-full mt-6 overflow-hidden relative">
+            {/* Tagline */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-xs md:text-sm tracking-[0.3em] uppercase text-gold-300/80 mb-4 font-medium"
+            >
+              {siteContent.brand.tagline}
+            </motion.p>
+
+            {/* Slogan */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="font-serif italic text-sm text-neutral-400 tracking-wide max-w-xs"
+            >
+              &ldquo;{siteContent.brand.slogans.primary}&rdquo;
+            </motion.p>
+
+            {/* Loading Bar */}
+            <div className="w-44 h-[2px] bg-obsidian-700/60 rounded-full mt-8 overflow-hidden relative">
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-                className="w-full h-full bg-gradient-to-r from-transparent via-gold-400 to-transparent shadow-gold-glow"
+                className="w-full h-full bg-gradient-to-r from-transparent via-gold-400 to-transparent"
               />
             </div>
           </motion.div>
