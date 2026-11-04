@@ -33,10 +33,10 @@ export default function PropertiesSection() {
         );
 
   return (
-    <section id="properties" className="relative py-20 lg:py-28 bg-[#07080B] overflow-hidden">
+    <section id="properties" className="relative py-20 lg:py-28 bg-[#F8F9FC] overflow-hidden border-b border-gold-500/20">
       {/* Ambient background lighting */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-gold-400/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-navy-500/5 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -47,10 +47,10 @@ export default function PropertiesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 mb-4"
+              className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 mb-4 shadow-sm"
             >
-              <Building className="w-3.5 h-3.5 text-gold-300" />
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-300">
+              <Building className="w-3.5 h-3.5 text-gold-600" />
+              <span className="text-xs uppercase tracking-[0.2em] font-bold text-gold-700">
                 Curated Portfolio
               </span>
             </motion.div>
@@ -60,7 +60,7 @@ export default function PropertiesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1F3F] tracking-tight mb-3"
             >
               Featured Prime Listings &{" "}
               <span className="text-gold-gradient">Exclusive Mandates</span>
@@ -71,7 +71,7 @@ export default function PropertiesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-neutral-400 text-sm sm:text-base font-light"
+              className="text-slate-600 text-sm sm:text-base font-light"
             >
               Hand-vetted properties across prime locations. Contact Pranav Bansal for private inspections and off-market inventory.
             </motion.p>
@@ -81,9 +81,9 @@ export default function PropertiesSection() {
           <div className="shrink-0">
             <a
               href={`tel:${siteContent.consultant.phone}`}
-              className="btn-luxury-outline px-5 py-3 rounded-xl text-sm font-semibold flex items-center space-x-2"
+              className="btn-luxury-outline px-5 py-3 rounded-xl text-sm font-bold flex items-center space-x-2"
             >
-              <Phone className="w-4 h-4 text-gold-400" />
+              <Phone className="w-4 h-4 text-gold-600" />
               <span>Inquire for Off-Market Assets</span>
             </a>
           </div>
@@ -91,15 +91,15 @@ export default function PropertiesSection() {
 
         {/* Category Filter Tabs */}
         <div className="flex items-center space-x-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
-          <div className="flex items-center space-x-2 p-1.5 rounded-2xl bg-obsidian-850/80 border border-white/10 backdrop-blur-md">
+          <div className="flex items-center space-x-2 p-1.5 rounded-2xl bg-white border border-gold-500/30 shadow-sm">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
                   selectedCategory === cat
-                    ? "bg-gold-gradient text-obsidian-950 font-bold shadow-gold-glow"
-                    : "text-neutral-300 hover:text-white hover:bg-white/5"
+                    ? "bg-gold-gradient text-navy-950 shadow-gold-glow"
+                    : "text-[#0B1F3F] hover:bg-gold-500/10"
                 }`}
               >
                 {cat}
@@ -119,11 +119,11 @@ export default function PropertiesSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="glass-card glass-card-hover rounded-3xl overflow-hidden border border-gold-400/20 flex flex-col justify-between group"
+                className="bg-white rounded-3xl overflow-hidden border border-gold-500/25 shadow-sm hover:shadow-xl hover:border-gold-500/60 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Property Image Container */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-obsidian-900">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
                     <Image
                       src={property.image}
                       alt={property.title}
@@ -133,23 +133,23 @@ export default function PropertiesSection() {
                     />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-black/30" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3F]/80 via-transparent to-black/30" />
 
                     {/* Top Badges */}
                     <div className="absolute top-4 inset-x-4 flex items-center justify-between">
-                      <span className="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/60 text-gold-300 border border-gold-400/30 backdrop-blur-md">
+                      <span className="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#0B1F3F]/80 text-gold-300 border border-gold-400/40 backdrop-blur-md">
                         {property.category}
                       </span>
 
-                      <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-gold-400 text-obsidian-950 shadow-md">
+                      <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-gold-400 text-navy-950 shadow-md">
                         {property.tag}
                       </span>
                     </div>
 
                     {/* Bottom Price Pill */}
                     <div className="absolute bottom-4 left-4">
-                      <div className="px-3.5 py-1.5 rounded-xl bg-obsidian-950/80 backdrop-blur-md border border-gold-400/30">
-                        <span className="font-serif text-lg font-bold text-gold-300">
+                      <div className="px-3.5 py-1.5 rounded-xl bg-white/95 backdrop-blur-md border border-gold-500/40 shadow-md">
+                        <span className="font-serif text-lg font-bold text-[#0B1F3F]">
                           {property.price}
                         </span>
                       </div>
@@ -158,37 +158,37 @@ export default function PropertiesSection() {
 
                   {/* Property Content */}
                   <div className="p-6">
-                    <div className="flex items-center space-x-1.5 text-xs text-neutral-400 mb-2">
-                      <MapPin className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                    <div className="flex items-center space-x-1.5 text-xs text-slate-500 mb-2">
+                      <MapPin className="w-3.5 h-3.5 text-gold-600 shrink-0" />
                       <span>{property.location}</span>
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-white group-hover:text-gold-200 transition-colors mb-3 line-clamp-1">
+                    <h3 className="font-serif text-xl font-bold text-[#0B1F3F] group-hover:text-gold-600 transition-colors mb-2 line-clamp-1">
                       {property.title}
                     </h3>
 
                     {property.priceSub && (
-                      <p className="text-xs text-gold-400/90 font-medium mb-4">
+                      <p className="text-xs text-gold-700 font-semibold mb-4">
                         {property.priceSub}
                       </p>
                     )}
 
                     {/* Specs Grid */}
-                    <div className="pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-xs text-neutral-300">
+                    <div className="pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-xs text-slate-600">
                       <div>
-                        <span className="text-neutral-500 block text-[10px] uppercase tracking-wider">
+                        <span className="text-slate-400 block text-[10px] uppercase tracking-wider font-semibold">
                           Configuration
                         </span>
-                        <span className="font-medium text-white truncate block">
+                        <span className="font-bold text-[#0B1F3F] truncate block">
                           {property.specs.type}
                         </span>
                       </div>
 
                       <div>
-                        <span className="text-neutral-500 block text-[10px] uppercase tracking-wider">
+                        <span className="text-slate-400 block text-[10px] uppercase tracking-wider font-semibold">
                           Area / Dimensions
                         </span>
-                        <span className="font-medium text-white truncate block">
+                        <span className="font-bold text-[#0B1F3F] truncate block">
                           {property.specs.size}
                         </span>
                       </div>
@@ -198,16 +198,16 @@ export default function PropertiesSection() {
 
                 {/* Card Action Buttons */}
                 <div className="p-6 pt-0">
-                  <div className="pt-4 border-t border-white/5 flex items-center space-x-2">
+                  <div className="pt-4 border-t border-slate-100 flex items-center space-x-2">
                     <a
                       href={`https://wa.me/919988885889?text=Hello%20Pranav,%20I%20would%20like%20to%20inquire%20about%20the%20listing:%20${encodeURIComponent(
                         property.title
                       )}%20(${property.location})%20priced%20at%20${encodeURIComponent(property.price)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-2.5 px-3 rounded-xl border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 hover:bg-emerald-900/30 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors"
+                      className="flex-1 py-2.5 px-3 rounded-xl border border-emerald-500/30 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 text-xs font-bold flex items-center justify-center space-x-1.5 transition-colors shadow-sm"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                      <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
                       <span>WhatsApp Info</span>
                     </a>
 
@@ -226,14 +226,14 @@ export default function PropertiesSection() {
           </AnimatePresence>
         </motion.div>
 
-        {/* Note on Easy Customization */}
-        <div className="mt-14 text-center p-6 rounded-2xl bg-obsidian-850 border border-white/10 max-w-2xl mx-auto">
-          <p className="text-xs text-neutral-400 leading-relaxed">
+        {/* Note on Off-Market Mandates */}
+        <div className="mt-14 text-center p-6 rounded-2xl bg-white border border-gold-500/30 shadow-sm max-w-2xl mx-auto">
+          <p className="text-xs text-slate-600 leading-relaxed font-normal">
             Looking for something specific? Pranav Bansal holds private mandates for luxury penthouses, commercial floorplates, and SCO plots not displayed publicly due to non-disclosure agreements.
           </p>
           <a
             href={`tel:${siteContent.consultant.phone}`}
-            className="inline-flex items-center space-x-1.5 text-gold-300 hover:text-white text-xs font-semibold mt-2.5 transition-colors"
+            className="inline-flex items-center space-x-1.5 text-gold-700 hover:text-[#0B1F3F] text-xs font-bold mt-2.5 transition-colors"
           >
             <span>Request Private Catalog via Phone ({siteContent.consultant.phoneDisplay})</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

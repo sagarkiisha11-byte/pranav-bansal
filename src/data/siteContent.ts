@@ -61,6 +61,8 @@ export const siteContent = {
     name: "Gaurav Estates",
     shortName: "Gaurav Estates",
     tagline: "Buy | Sell | Invest",
+    logo: "/logo.png",
+    favicon: "/favicon.png",
     slogans: {
       primary: "Good People Build Great Places",
       secondary: "Properties Today | Prosperity Tomorrow",
@@ -416,3 +418,4 @@ export const siteContent = {
     { label: "Contact", href: "#contact" },
   ],
 };
+

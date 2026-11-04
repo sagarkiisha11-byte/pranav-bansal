@@ -59,9 +59,9 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="why-us" className="relative py-20 lg:py-28 bg-[#090B10] border-t border-b border-white/5">
+    <section id="why-us" className="relative py-20 lg:py-28 bg-gradient-to-b from-[#07152B] via-[#0B1F3F] to-[#07152B] text-white border-t border-b border-gold-500/20">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-400/5 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-400/10 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -71,10 +71,10 @@ export default function WhyChooseUsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 mb-4"
+            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold-400/40 bg-[#0B1F3F]/80 backdrop-blur-md mb-4 shadow-sm"
           >
             <Sparkles className="w-3.5 h-3.5 text-gold-300" />
-            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-300">
+            <span className="text-xs uppercase tracking-[0.2em] font-bold text-gold-300">
               The Advisory Advantage
             </span>
           </motion.div>
@@ -95,7 +95,7 @@ export default function WhyChooseUsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-neutral-400 text-base sm:text-lg font-light leading-relaxed"
+            className="text-slate-300 text-base sm:text-lg font-light leading-relaxed"
           >
             Built on our guiding philosophy that &ldquo;{siteContent.brand.slogans.primary}&rdquo;. Here is how we protect and grow your capital.
           </motion.p>
@@ -110,15 +110,15 @@ export default function WhyChooseUsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-card glass-card-hover rounded-2xl p-7 border border-gold-400/15 relative overflow-hidden group flex flex-col justify-between"
+              className="glass-card-dark rounded-2xl p-7 border-2 border-gold-400/25 relative overflow-hidden group flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center shadow-gold-glow group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-gold-400/20 border border-gold-400/40 flex items-center justify-center shadow-gold-glow group-hover:scale-105 transition-transform">
                     {getPillarIcon(pillar.icon)}
                   </div>
 
-                  <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-gold-300/80 px-2.5 py-1 rounded-md bg-gold-400/10 border border-gold-400/20">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-gold-300 px-2.5 py-1 rounded-md bg-gold-400/15 border border-gold-400/30">
                     {pillar.tag}
                   </span>
                 </div>
@@ -127,13 +127,13 @@ export default function WhyChooseUsSection() {
                   {pillar.title}
                 </h3>
 
-                <p className="text-sm text-neutral-300 leading-relaxed font-light">
+                <p className="text-sm text-slate-300 leading-relaxed font-normal">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-white/5 flex items-center space-x-2 text-xs text-gold-400 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5" />
+              <div className="pt-4 mt-4 border-t border-white/10 flex items-center space-x-2 text-xs text-gold-300 font-semibold">
+                <CheckCircle2 className="w-3.5 h-3.5 text-gold-400" />
                 <span>Verified Client Standard</span>
               </div>
             </motion.div>
@@ -146,11 +146,11 @@ export default function WhyChooseUsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="glass-card rounded-3xl p-6 sm:p-10 border border-gold-400/25 relative overflow-hidden"
+          className="glass-card-dark rounded-3xl p-6 sm:p-10 border-2 border-gold-400/30 relative overflow-hidden shadow-2xl"
         >
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/15">
             <div>
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-400">
+              <span className="text-xs uppercase tracking-[0.2em] font-bold text-gold-400">
                 Institutional Rigor
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">
@@ -160,7 +160,7 @@ export default function WhyChooseUsSection() {
 
             <a
               href={`tel:${siteContent.consultant.phone}`}
-              className="btn-luxury-gold px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 shrink-0 self-start md:self-auto"
+              className="btn-luxury-gold px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-2 shrink-0 self-start md:self-auto shadow-md"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Discuss Your Requirements</span>
@@ -170,31 +170,31 @@ export default function WhyChooseUsSection() {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm border-collapse min-w-[600px]">
               <thead>
-                <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-neutral-400">
+                <tr className="border-b border-white/15 text-xs uppercase tracking-wider text-slate-300">
                   <th className="py-3 px-4 w-1/3">Key Evaluation Metric</th>
-                  <th className="py-3 px-4 w-1/3 text-gold-300 font-bold bg-gold-400/10 rounded-t-xl">
+                  <th className="py-3 px-4 w-1/3 text-gold-300 font-bold bg-gold-400/15 rounded-t-xl border-t border-l border-r border-gold-400/30">
                     ★ Gaurav Estates (Pranav Bansal)
                   </th>
-                  <th className="py-3 px-4 w-1/3 text-neutral-400">
+                  <th className="py-3 px-4 w-1/3 text-slate-400">
                     Typical Market Broker
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-white/10">
                 {comparisons.map((item, idx) => (
-                  <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
-                    <td className="py-4 px-4 font-medium text-white">
+                  <tr key={idx} className="hover:bg-white/[0.03] transition-colors">
+                    <td className="py-4 px-4 font-semibold text-white">
                       {item.feature}
                     </td>
-                    <td className="py-4 px-4 text-neutral-100 font-medium bg-gold-400/[0.04]">
+                    <td className="py-4 px-4 text-white font-medium bg-gold-400/10 border-l border-r border-gold-400/20">
                       <div className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-gold-400 shrink-0" />
                         <span>{item.gaurav}</span>
                       </div>
                     </td>
-                    <td className="py-4 px-4 text-neutral-400">
+                    <td className="py-4 px-4 text-slate-400">
                       <div className="flex items-center space-x-2">
-                        <X className="w-4 h-4 text-red-400/70 shrink-0" />
+                        <X className="w-4 h-4 text-red-400 shrink-0" />
                         <span>{item.traditional}</span>
                       </div>
                     </td>
