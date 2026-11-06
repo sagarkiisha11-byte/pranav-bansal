@@ -76,9 +76,9 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-7 space-y-6"
+            className="lg:col-span-7 space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start"
           >
-            <div className="space-y-4">
+            <div className="space-y-4 text-center lg:text-left w-full">
               <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-white">
                 {siteContent.consultant.name}
               </h3>
@@ -88,7 +88,7 @@ export default function AboutSection() {
             </div>
 
             {/* Slogan Banner */}
-            <div className="p-5 rounded-2xl bg-gradient-to-r from-gold-400/15 via-gold-400/5 to-transparent border-l-4 border-gold-400 glass-card">
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-gold-400/15 via-gold-400/5 to-transparent border-t-2 md:border-t-0 md:border-l-4 border-gold-400 glass-card text-center lg:text-left w-full">
               <p className="font-serif italic text-lg sm:text-xl text-neutral-100 font-medium mb-1">
                 &ldquo;{siteContent.brand.slogans.secondary}&rdquo;
               </p>
@@ -98,20 +98,20 @@ export default function AboutSection() {
             </div>
 
             {/* Bio Paragraphs */}
-            <div className="space-y-4 text-neutral-300 text-base leading-relaxed font-light">
+            <div className="space-y-4 text-neutral-300 text-base leading-relaxed font-light text-center lg:text-left">
               {siteContent.consultant.bio.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
               ))}
             </div>
 
             {/* Commitments List */}
-            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
               {commitments.map((item, idx) => (
                 <div
                   key={idx}
                   className="p-4 rounded-xl bg-obsidian-850 border border-white/5 hover:border-gold-400/30 transition-colors"
                 >
-                  <div className="flex items-start space-x-3">
+                  <div className="flex items-start space-x-3 text-left">
                     <CheckCircle2 className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-sm font-semibold text-white mb-1">
@@ -127,7 +127,7 @@ export default function AboutSection() {
             </div>
 
             {/* Consultant Actions */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
+            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full">
               <a
                 href={siteContent.consultant.phoneTel}
                 className="btn-luxury-gold px-6 py-3 rounded-xl text-sm font-semibold flex items-center space-x-2"
@@ -158,11 +158,11 @@ export default function AboutSection() {
               {siteContent.stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="glass-card glass-card-hover p-6 rounded-2xl border border-gold-400/20 relative overflow-hidden group"
+                  className="glass-card glass-card-hover p-6 rounded-2xl border border-gold-400/20 relative overflow-hidden group text-center lg:text-left"
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gold-400/5 rounded-full blur-2xl group-hover:bg-gold-400/10 transition-colors" />
 
-                  <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gold-gradient mb-2">
+                  <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gold-gradient mb-2 text-center lg:text-left">
                     <AnimatedCounter
                       value={stat.value}
                       prefix={stat.prefix}
@@ -170,11 +170,11 @@ export default function AboutSection() {
                     />
                   </div>
 
-                  <h4 className="text-sm sm:text-base font-semibold text-white mb-1">
+                  <h4 className="text-sm sm:text-base font-semibold text-white mb-1 text-center lg:text-left">
                     {stat.label}
                   </h4>
 
-                  <p className="text-xs text-neutral-400 leading-normal">
+                  <p className="text-xs text-neutral-400 leading-normal text-center lg:text-left">
                     {stat.desc}
                   </p>
                 </div>
@@ -189,21 +189,21 @@ export default function AboutSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="p-6 rounded-2xl bg-gradient-to-br from-obsidian-850 to-obsidian-900 border border-gold-400/25 relative"
             >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-300">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-300 shrink-0">
                   <Shield className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg font-bold text-white">
+                  <h4 className="font-serif text-lg font-bold text-white text-center sm:text-left">
                     The Gaurav Estates Seal of Trust
                   </h4>
-                  <p className="text-xs text-gold-400 font-medium">
+                  <p className="text-xs text-gold-400 font-medium text-center sm:text-left">
                     {siteContent.consultant.reraNumber}
                   </p>
                 </div>
               </div>
 
-              <p className="text-xs text-neutral-300 leading-relaxed italic mb-4">
+              <p className="text-xs text-neutral-300 leading-relaxed italic mb-4 text-center sm:text-left">
                 &ldquo;{siteContent.brand.slogans.action}. Whether you are investing for generational rental yields or acquiring your flagship family estate, our guidance is built on transparent data and absolute integrity.&rdquo;
               </p>
 

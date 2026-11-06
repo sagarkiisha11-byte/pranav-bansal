@@ -123,10 +123,10 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5 flex flex-col justify-between space-y-8"
+            className="lg:col-span-5 flex flex-col justify-between space-y-8 text-center lg:text-left items-center lg:items-start"
           >
-            <div className="space-y-6">
-              <div>
+            <div className="space-y-6 w-full">
+              <div className="text-center lg:text-left">
                 <h3 className="font-serif text-2xl font-bold text-white mb-2">
                   Direct Private Access
                 </h3>
@@ -136,12 +136,12 @@ export default function ContactSection() {
               </div>
 
               {/* Direct Call & WhatsApp Highlight Cards */}
-              <div className="space-y-3">
+              <div className="space-y-3 w-full">
                 <a
                   href={`tel:${siteContent.consultant.phone}`}
-                  className="flex items-center space-x-4 p-4 rounded-2xl glass-card hover:border-gold-400/50 transition-all group"
+                  className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-4 p-4 rounded-2xl glass-card hover:border-gold-400/50 transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center text-gold-300 group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center text-gold-300 group-hover:scale-105 transition-transform shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -158,9 +158,9 @@ export default function ContactSection() {
                   href={siteContent.consultant.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 rounded-2xl border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-900/30 transition-all group"
+                  className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-4 p-4 rounded-2xl border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-900/30 transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform shrink-0">
                     <MessageCircle className="w-6 h-6" />
                   </div>
                   <div>
@@ -173,8 +173,8 @@ export default function ContactSection() {
                   </div>
                 </a>
 
-                <div className="flex items-center space-x-4 p-4 rounded-2xl glass-card">
-                  <div className="w-12 h-12 rounded-xl bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold-300">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-4 p-4 rounded-2xl glass-card">
+                  <div className="w-12 h-12 rounded-xl bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold-300 shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div className="overflow-hidden">
@@ -190,7 +190,7 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 p-4 rounded-2xl glass-card">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-4 p-4 rounded-2xl glass-card">
                   <div className="w-12 h-12 rounded-xl bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold-300 shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
@@ -207,8 +207,8 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 p-4 rounded-2xl glass-card">
-                  <div className="w-12 h-12 rounded-xl bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold-300">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-3 sm:space-y-0 sm:space-x-4 p-4 rounded-2xl glass-card">
+                  <div className="w-12 h-12 rounded-xl bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold-300 shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -278,21 +278,21 @@ export default function ContactSection() {
             className="lg:col-span-7"
           >
             <div className="glass-card rounded-3xl p-7 sm:p-10 border border-gold-400/25 relative overflow-hidden shadow-2xl">
-              <div className="mb-8">
-                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-400">
+              <div className="mb-8 text-center sm:text-left">
+                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-400 block text-center sm:text-left">
                   Direct Mandate Inquiry
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1 text-center sm:text-left">
                   Request a Private Consultation
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-400 mt-1 font-light">
+                <p className="text-xs sm:text-sm text-neutral-400 mt-1 font-light text-center sm:text-left">
                   All inquiries are handled strictly under client non-disclosure protocols.
                 </p>
               </div>
 
               {/* Status Notifications */}
               {status === "success" && (
-                <div className="mb-6 p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/40 text-emerald-200 text-sm flex items-start space-x-3">
+                <div className="mb-6 p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/40 text-emerald-200 text-sm flex items-start space-x-3 text-left">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-emerald-300">Consultation Request Confirmed</p>
@@ -307,7 +307,7 @@ export default function ContactSection() {
               )}
 
               {status === "error" && (
-                <div className="mb-6 p-4 rounded-xl border border-red-500/40 bg-red-950/40 text-red-200 text-sm flex items-start space-x-3">
+                <div className="mb-6 p-4 rounded-xl border border-red-500/40 bg-red-950/40 text-red-200 text-sm flex items-start space-x-3 text-left">
                   <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-red-300">Submission Notice</p>
@@ -322,7 +322,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
                     >
                       Full Name *
                     </label>
@@ -334,7 +334,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Vikram Malhotra"
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors text-center sm:text-left"
                     />
                   </div>
 
@@ -342,7 +342,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
                     >
                       Phone Number *
                     </label>
@@ -354,7 +354,7 @@ export default function ContactSection() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="e.g. 9988885889"
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors text-center sm:text-left"
                     />
                   </div>
                 </div>
@@ -364,7 +364,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
                     >
                       Email Address
                     </label>
@@ -375,7 +375,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="name@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors text-center sm:text-left"
                     />
                   </div>
 
@@ -383,7 +383,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="requirementType"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
                     >
                       Interest Area
                     </label>
@@ -392,7 +392,7 @@ export default function ContactSection() {
                       name="requirementType"
                       value={formData.requirementType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-sm transition-colors cursor-pointer"
+                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-sm transition-colors cursor-pointer text-center sm:text-left"
                     >
                       <option value="Residential Properties">Residential Properties (Villas/Condos)</option>
                       <option value="Commercial Spaces">Commercial Spaces (Offices/SCOs)</option>
@@ -407,7 +407,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="budget"
-                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2"
+                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
                   >
                     Target Budget Range
                   </label>
@@ -416,7 +416,7 @@ export default function ContactSection() {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-sm transition-colors cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-sm transition-colors cursor-pointer text-center sm:text-left"
                   >
                     <option value="₹75L - ₹1.5 Cr">₹75 Lakh - ₹1.5 Crore</option>
                     <option value="₹1.5 Cr - ₹3 Cr">₹1.5 Crore - ₹3 Crore</option>
@@ -430,7 +430,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2"
+                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
                   >
                     Your Requirements & Timeline
                   </label>
@@ -441,7 +441,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Provide details about your preferred location, expected handover timeline, or specific property features..."
-                    className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors resize-none text-center sm:text-left"
                   />
                 </div>
 

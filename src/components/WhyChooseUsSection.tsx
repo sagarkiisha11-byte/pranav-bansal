@@ -113,7 +113,7 @@ export default function WhyChooseUsSection() {
               className="glass-card glass-card-hover rounded-2xl p-7 border border-gold-400/15 relative overflow-hidden group flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-5">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-5">
                   <div className="w-12 h-12 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center shadow-gold-glow group-hover:scale-105 transition-transform">
                     {getPillarIcon(pillar.icon)}
                   </div>
@@ -123,16 +123,16 @@ export default function WhyChooseUsSection() {
                   </span>
                 </div>
 
-                <h3 className="font-serif text-xl font-bold text-white mb-2.5 group-hover:text-gold-200 transition-colors">
+                <h3 className="font-serif text-xl font-bold text-white mb-2.5 group-hover:text-gold-200 transition-colors text-center md:text-left">
                   {pillar.title}
                 </h3>
 
-                <p className="text-sm text-neutral-300 leading-relaxed font-light">
+                <p className="text-sm text-neutral-300 leading-relaxed font-light text-center md:text-left">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-white/5 flex items-center space-x-2 text-xs text-gold-400 font-medium">
+              <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-center md:justify-start space-x-2 text-xs text-gold-400 font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Verified Client Standard</span>
               </div>
@@ -148,7 +148,7 @@ export default function WhyChooseUsSection() {
           transition={{ duration: 0.7 }}
           className="glass-card rounded-3xl p-6 sm:p-10 border border-gold-400/25 relative overflow-hidden"
         >
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10 text-center md:text-left items-center md:items-start">
             <div>
               <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-400">
                 Institutional Rigor
@@ -160,7 +160,7 @@ export default function WhyChooseUsSection() {
 
             <a
               href={`tel:${siteContent.consultant.phone}`}
-              className="btn-luxury-gold px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 shrink-0 self-start md:self-auto"
+              className="btn-luxury-gold px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 shrink-0 self-center md:self-auto"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>Discuss Your Requirements</span>

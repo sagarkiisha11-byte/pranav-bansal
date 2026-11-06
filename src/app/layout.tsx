@@ -139,13 +139,50 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              html, body {
+                background-color: #07080B;
+              }
+              body.is-loading {
+                overflow: hidden !important;
+                touch-action: none;
+              }
+              body.is-loading #site-content {
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
+              }
+              #site-content {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+              }
+              #site-splash {
+                position: fixed;
+                inset: 0;
+                width: 100vw;
+                width: 100%;
+                height: 100vh;
+                height: 100dvh;
+                background-color: #07080B;
+                z-index: 99999;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              }
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body
-        className={`${playfair.variable} ${plusJakarta.variable} font-sans bg-[#07080B] text-[#EDE8DF] antialiased selection:bg-gold-500/30 selection:text-white`}
+        className={`is-loading ${playfair.variable} ${plusJakarta.variable} font-sans bg-[#07080B] text-[#EDE8DF] antialiased selection:bg-gold-500/30 selection:text-white`}
       >
         {children}
       </body>

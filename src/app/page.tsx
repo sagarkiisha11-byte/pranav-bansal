@@ -16,19 +16,21 @@ export default function Home() {
   return (
     <SmoothScroll>
       <Preloader />
-      <Navbar />
-      <main className="relative flex flex-col min-h-screen">
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <WhyChooseUsSection />
-        <PropertiesSection />
-        <TestimonialsSection />
-        <FAQSection />
-        <ContactSection />
-      </main>
-      <Footer />
-      <FloatingActions />
+      <div id="site-content">
+        <Navbar />
+        <main className="relative flex flex-col min-h-screen">
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <WhyChooseUsSection />
+          <PropertiesSection />
+          <TestimonialsSection />
+          <FAQSection />
+          <ContactSection />
+        </main>
+        <Footer />
+        <FloatingActions />
+      </div>
     </SmoothScroll>
   );
 }

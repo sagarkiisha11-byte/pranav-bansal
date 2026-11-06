@@ -11,26 +11,40 @@ export default function Preloader() {
   useEffect(() => {
     // Check prefers-reduced-motion
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.body.classList.remove("is-loading");
       setLoading(false);
       return;
     }
 
-    // Let preloader display for a short, elegant duration
+    // Let preloader display for original duration
     const timer = setTimeout(() => {
+      document.body.classList.remove("is-loading");
       setLoading(false);
     }, 1500);
 
-    return () => clearTimeout(timer);
+    // Fallback safety release so body never stays locked
+    const safety = setTimeout(() => {
+      document.body.classList.remove("is-loading");
+    }, 2500);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(safety);
+    };
   }, []);
 
   return (
     <AnimatePresence>
       {loading && (
         <motion.div
+          id="site-splash"
           key="preloader"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#07080B] text-[#EDE8DF] select-none"
+          onAnimationComplete={() => {
+            document.body.classList.remove("is-loading");
+          }}
+          className="fixed inset-0 w-full h-[100dvh] z-[99999] flex flex-col items-center justify-center bg-[#07080B] text-[#EDE8DF] select-none px-6"
         >
           {/* Subtle ambient gold radial background */}
           <div className="absolute inset-0 bg-radial-dark opacity-60 pointer-events-none" />
@@ -39,16 +53,17 @@ export default function Preloader() {
             initial={{ scale: 0.85, opacity: 0, y: 15 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex flex-col items-center text-center px-6 max-w-sm w-full"
+            className="relative flex flex-col items-center text-center px-4 sm:px-6 w-full max-w-[80vw] sm:max-w-sm"
           >
-            {/* Logo directly on dark preloader (no white box) */}
-            <div className="relative mb-6 p-2 overflow-hidden w-full max-w-[320px]">
-              <div className="relative aspect-[816/461] w-full">
+            {/* Logo directly on dark preloader (no white box) - responsive with safe margins */}
+            <div className="relative mb-6 p-2 overflow-hidden w-full max-w-[80vw] sm:max-w-[320px] flex items-center justify-center">
+              <div className="relative aspect-[816/461] w-full max-w-[270px] sm:max-w-[320px]">
                 <Image
                   src="/logo.png"
                   alt="Gaurav Estates Logo"
                   fill
                   priority
+                  sizes="(max-width: 768px) 80vw, 320px"
                   className="object-contain"
                 />
               </div>
@@ -60,12 +75,12 @@ export default function Preloader() {
               />
             </div>
 
-            {/* Brand Name */}
+            {/* Brand Name - clamped on mobile so it never overflows */}
             <motion.h1
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="font-serif text-3xl md:text-4xl font-bold tracking-widest text-gold-gradient uppercase mb-2"
+              className="font-serif text-[clamp(1.35rem,5.5vw,2.25rem)] md:text-4xl font-bold tracking-widest text-gold-gradient uppercase mb-2"
             >
               {siteContent.brand.name}
             </motion.h1>
@@ -75,7 +90,7 @@ export default function Preloader() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-xs md:text-sm tracking-[0.3em] uppercase text-gold-300/80 mb-4 font-medium"
+              className="text-[clamp(0.65rem,2.4vw,0.875rem)] tracking-[0.25em] sm:tracking-[0.3em] uppercase text-gold-300/80 mb-4 font-medium"
             >
               {siteContent.brand.tagline}
             </motion.p>
@@ -85,13 +100,13 @@ export default function Preloader() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="font-serif italic text-sm text-neutral-400 tracking-wide max-w-xs"
+              className="font-serif italic text-xs sm:text-sm text-neutral-400 tracking-wide max-w-xs"
             >
               &ldquo;{siteContent.brand.slogans.primary}&rdquo;
             </motion.p>
 
             {/* Loading Bar */}
-            <div className="w-44 h-[2px] bg-obsidian-700/60 rounded-full mt-8 overflow-hidden relative">
+            <div className="w-36 sm:w-44 h-[2px] bg-obsidian-700/60 rounded-full mt-6 sm:mt-8 overflow-hidden relative">
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}

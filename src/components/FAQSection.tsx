@@ -88,7 +88,7 @@ export default function FAQSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-neutral-300 leading-relaxed font-light border-t border-white/5"
+                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-neutral-300 leading-relaxed font-light border-t border-white/5 text-center sm:text-left"
                     >
                       {faq.answer}
                     </motion.div>
@@ -101,7 +101,7 @@ export default function FAQSection() {
 
         {/* Still Have Questions Box */}
         <div className="mt-12 p-6 rounded-2xl bg-obsidian-850/80 border border-gold-400/20 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-left">
+          <div className="text-center sm:text-left">
             <h4 className="font-serif text-lg font-bold text-white">
               Have a distinct question about a specific sector or property?
             </h4>
@@ -110,7 +110,7 @@ export default function FAQSection() {
             </p>
           </div>
 
-          <div className="flex items-center space-x-3 shrink-0">
+          <div className="flex items-center justify-center space-x-3 shrink-0">
             <a
               href={`tel:${siteContent.consultant.phone}`}
               className="btn-luxury-gold px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center space-x-2"

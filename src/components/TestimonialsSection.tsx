@@ -96,26 +96,26 @@ export default function TestimonialsSection() {
               >
                 <div>
                   {/* Rating Stars & Property Type Badge */}
-                  <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-                    <div className="flex items-center space-x-1">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-6">
+                    <div className="flex items-center justify-center space-x-1">
                       {[...Array(current.rating)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
                       ))}
                     </div>
 
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gold-400/10 text-gold-300 border border-gold-400/25">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gold-400/10 text-gold-300 border border-gold-400/25 text-center">
                       Transacted: {current.propertyType}
                     </span>
                   </div>
 
                   {/* Testimonial Quote */}
-                  <blockquote className="font-serif text-lg sm:text-2xl text-neutral-100 font-light italic leading-relaxed mb-8">
+                  <blockquote className="font-serif text-lg sm:text-2xl text-neutral-100 font-light italic leading-relaxed mb-8 text-center md:text-left">
                     &ldquo;{current.content}&rdquo;
                   </blockquote>
                 </div>
 
                 {/* Author Info */}
-                <div className="flex items-center space-x-4 pt-6 border-t border-white/10">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-4 pt-6 border-t border-white/10 text-center sm:text-left">
                   <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-gold-400/40 shrink-0">
                     <Image
                       src={current.avatar}
@@ -126,14 +126,14 @@ export default function TestimonialsSection() {
                     />
                   </div>
 
-                  <div>
-                    <h3 className="font-serif text-lg font-bold text-white">
+                  <div className="text-center sm:text-left">
+                    <h3 className="font-serif text-lg font-bold text-white text-center sm:text-left">
                       {current.name}
                     </h3>
-                    <p className="text-xs text-gold-400 font-medium">
+                    <p className="text-xs text-gold-400 font-medium text-center sm:text-left">
                       {current.role}
                     </p>
-                    <p className="text-[11px] text-neutral-400">
+                    <p className="text-[11px] text-neutral-400 text-center sm:text-left">
                       {current.location}
                     </p>
                   </div>

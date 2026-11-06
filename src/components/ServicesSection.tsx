@@ -80,7 +80,7 @@ export default function ServicesSection() {
 
               <div>
                 {/* Header: Icon & Badge */}
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center shadow-gold-glow group-hover:scale-110 transition-transform duration-300">
                     {getIcon(service.icon)}
                   </div>
@@ -91,7 +91,7 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Service Title & Subtitle */}
-                <div className="mb-4">
+                <div className="mb-4 text-center md:text-left">
                   <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white group-hover:text-gold-200 transition-colors">
                     {service.title}
                   </h3>
@@ -101,12 +101,12 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Description */}
-                <p className="text-neutral-300 text-sm sm:text-base leading-relaxed font-light mb-6">
+                <p className="text-neutral-300 text-sm sm:text-base leading-relaxed font-light mb-6 text-center md:text-left">
                   {service.description}
                 </p>
 
                 {/* Highlights list */}
-                <div className="space-y-2.5 pt-4 border-t border-white/5 mb-8">
+                <div className="space-y-2.5 pt-4 border-t border-white/5 mb-8 text-left">
                   {service.highlights.map((highlight, hIdx) => (
                     <div key={hIdx} className="flex items-center space-x-2.5 text-xs sm:text-sm text-neutral-300">
                       <CheckCircle className="w-4 h-4 text-gold-400 shrink-0" />
@@ -117,7 +117,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-6 border-t border-white/10 flex items-center justify-between flex-wrap gap-3">
+              <div className="pt-6 border-t border-white/10 flex items-center justify-center md:justify-between flex-wrap gap-3">
                 <a
                   href={`#contact`}
                   className="inline-flex items-center space-x-2 text-sm font-semibold text-gold-300 group-hover:text-white transition-colors"

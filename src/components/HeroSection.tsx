@@ -24,13 +24,13 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Hero Copy & Actions */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          <div className="lg:col-span-7 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
             {/* Top Pill / Trust Tag */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 backdrop-blur-md mb-6 w-fit"
+              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 backdrop-blur-md mb-6 w-fit mx-auto lg:mx-0"
             >
               <Sparkles className="w-3.5 h-3.5 text-gold-300" />
               <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-300">
@@ -43,7 +43,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-100 leading-[1.12] mb-5"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-100 leading-[1.12] mb-5 text-center lg:text-left"
             >
               Architecting Generational Wealth Through{" "}
               <span className="text-gold-gradient block sm:inline">
@@ -56,21 +56,21 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="space-y-3 mb-8"
+              className="space-y-3 mb-8 w-full flex flex-col items-center lg:items-start text-center lg:text-left"
             >
-              <div className="flex items-center space-x-3 text-gold-300 font-semibold tracking-wider uppercase text-sm sm:text-base">
+              <div className="flex items-center justify-center lg:justify-start space-x-3 text-gold-300 font-semibold tracking-wider uppercase text-sm sm:text-base">
                 <span className="h-[1px] w-8 bg-gold-400/60" />
                 <span>{siteContent.brand.tagline}</span>
                 <span className="h-[1px] w-8 bg-gold-400/60" />
               </div>
 
-              <p className="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+              <p className="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl font-light text-center lg:text-left mx-auto lg:mx-0">
                 Consult with <strong className="text-white font-medium">{siteContent.consultant.name}</strong> for handpicked luxury residences, strategic commercial assets, freehold plots, and pre-leased high-yield investments.
               </p>
 
               {/* Slogan highlight pill */}
-              <div className="pt-1">
-                <p className="font-serif italic text-gold-200/90 text-sm sm:text-base border-l-2 border-gold-400/60 pl-3.5 py-0.5">
+              <div className="pt-1 w-full flex justify-center lg:justify-start">
+                <p className="font-serif italic text-gold-200/90 text-sm sm:text-base border-y md:border-y-0 md:border-l-2 border-gold-400/60 py-1.5 px-3 md:pl-3.5 md:py-0.5 text-center md:text-left">
                   &ldquo;{siteContent.brand.slogans.primary}&rdquo; —{" "}
                   <span className="text-neutral-400 font-sans not-italic text-xs">
                     {siteContent.brand.slogans.action}
@@ -84,7 +84,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-4 mb-10"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10 w-full"
             >
               {/* Primary Call CTA */}
               <a
@@ -123,17 +123,17 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 max-w-xl"
+              className="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl w-full mx-auto lg:mx-0"
             >
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <ShieldCheck className="w-4 h-4 text-gold-400 shrink-0" />
                 <span className="text-xs text-neutral-300 font-medium">100% Clear Titles</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <Award className="w-4 h-4 text-gold-400 shrink-0" />
                 <span className="text-xs text-neutral-300 font-medium">Direct Mandates</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <TrendingUp className="w-4 h-4 text-gold-400 shrink-0" />
                 <span className="text-xs text-neutral-300 font-medium">8-10% High Yields</span>
               </div>

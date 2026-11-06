@@ -40,14 +40,14 @@ export default function PropertiesSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-center md:text-left items-center md:items-start">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 mb-4"
+              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 mb-4 mx-auto md:mx-0"
             >
               <Building className="w-3.5 h-3.5 text-gold-300" />
               <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-300">
@@ -60,7 +60,7 @@ export default function PropertiesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3 text-center md:text-left"
             >
               Featured Prime Listings &{" "}
               <span className="text-gold-gradient">Exclusive Mandates</span>
@@ -71,14 +71,14 @@ export default function PropertiesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-neutral-400 text-sm sm:text-base font-light"
+              className="text-neutral-400 text-sm sm:text-base font-light text-center md:text-left"
             >
               Hand-vetted properties across prime locations. Contact Pranav Bansal for private inspections and off-market inventory.
             </motion.p>
           </div>
 
           {/* Quick Call Action */}
-          <div className="shrink-0">
+          <div className="shrink-0 flex justify-center md:justify-start">
             <a
               href={`tel:${siteContent.consultant.phone}`}
               className="btn-luxury-outline px-5 py-3 rounded-xl text-sm font-semibold flex items-center space-x-2"
@@ -90,7 +90,7 @@ export default function PropertiesSection() {
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex items-center space-x-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+        <div className="flex items-center justify-center md:justify-start space-x-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
           <div className="flex items-center space-x-2 p-1.5 rounded-2xl bg-obsidian-850/80 border border-white/10 backdrop-blur-md">
             {categories.map((cat) => (
               <button
@@ -157,24 +157,24 @@ export default function PropertiesSection() {
                   </div>
 
                   {/* Property Content */}
-                  <div className="p-6">
-                    <div className="flex items-center space-x-1.5 text-xs text-neutral-400 mb-2">
+                  <div className="p-6 text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start space-x-1.5 text-xs text-neutral-400 mb-2">
                       <MapPin className="w-3.5 h-3.5 text-gold-400 shrink-0" />
                       <span>{property.location}</span>
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-white group-hover:text-gold-200 transition-colors mb-3 line-clamp-1">
+                    <h3 className="font-serif text-xl font-bold text-white group-hover:text-gold-200 transition-colors mb-3 line-clamp-1 text-center md:text-left">
                       {property.title}
                     </h3>
 
                     {property.priceSub && (
-                      <p className="text-xs text-gold-400/90 font-medium mb-4">
+                      <p className="text-xs text-gold-400/90 font-medium mb-4 text-center md:text-left">
                         {property.priceSub}
                       </p>
                     )}
 
                     {/* Specs Grid */}
-                    <div className="pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-xs text-neutral-300">
+                    <div className="pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-xs text-neutral-300 text-center md:text-left">
                       <div>
                         <span className="text-neutral-500 block text-[10px] uppercase tracking-wider">
                           Configuration
@@ -198,7 +198,7 @@ export default function PropertiesSection() {
 
                 {/* Card Action Buttons */}
                 <div className="p-6 pt-0">
-                  <div className="pt-4 border-t border-white/5 flex items-center space-x-2">
+                  <div className="pt-4 border-t border-white/5 flex items-center justify-center space-x-2">
                     <a
                       href={`https://wa.me/919988885889?text=Hello%20Pranav,%20I%20would%20like%20to%20inquire%20about%20the%20listing:%20${encodeURIComponent(
                         property.title
