@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://gauravestates.com/sitemap.xml",
+    sitemap: "https://pranav-bansal.netlify.app/sitemap.xml",
   };
 }
 

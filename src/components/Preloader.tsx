@@ -56,14 +56,14 @@ export default function Preloader() {
             className="relative flex flex-col items-center text-center px-4 sm:px-6 w-full max-w-[80vw] sm:max-w-sm"
           >
             {/* Logo directly on dark preloader (no white box) - responsive with safe margins */}
-            <div className="relative mb-6 p-2 overflow-hidden w-full max-w-[80vw] sm:max-w-[320px] flex items-center justify-center">
-              <div className="relative aspect-[816/461] w-full max-w-[270px] sm:max-w-[320px]">
+            <div className="relative mb-6 p-2 overflow-hidden w-full max-w-[85vw] sm:max-w-[380px] flex items-center justify-center">
+              <div className="relative aspect-[782/136] w-full max-w-[340px] sm:max-w-[380px]">
                 <Image
-                  src="/logo.png"
-                  alt="Gaurav Estates Logo"
+                  src="/assets/logo.png"
+                  alt="Pranav Bansal - Real Estate Consultant"
                   fill
                   priority
-                  sizes="(max-width: 768px) 80vw, 320px"
+                  sizes="(max-width: 768px) 85vw, 380px"
                   className="object-contain"
                 />
               </div>

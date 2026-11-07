@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://gauravestates.com";
+  const baseUrl = "https://pranav-bansal.netlify.app";
 
   return [
     {

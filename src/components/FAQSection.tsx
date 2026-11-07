@@ -47,7 +47,7 @@ export default function FAQSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-neutral-400 text-sm sm:text-base font-light"
           >
-            Everything you need to know about consulting, due diligence, and acquiring assets through Gaurav Estates.
+            Everything you need to know about consulting, due diligence, and acquiring assets through Pranav Bansal.
           </motion.p>
         </div>
 

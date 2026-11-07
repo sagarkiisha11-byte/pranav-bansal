@@ -83,7 +83,7 @@ export default function AboutSection() {
                 {siteContent.consultant.name}
               </h3>
               <p className="text-sm font-semibold tracking-wider uppercase text-gold-400">
-                {siteContent.consultant.title} • {siteContent.brand.name}
+                {siteContent.consultant.title}
               </p>
             </div>
 
@@ -93,7 +93,7 @@ export default function AboutSection() {
                 &ldquo;{siteContent.brand.slogans.secondary}&rdquo;
               </p>
               <p className="text-xs text-neutral-400">
-                Foundational creed guiding every client consultation at {siteContent.brand.name}.
+                Foundational creed guiding every client consultation.
               </p>
             </div>
 
@@ -195,7 +195,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h4 className="font-serif text-lg font-bold text-white text-center sm:text-left">
-                    The Gaurav Estates Seal of Trust
+                    The Pranav Bansal Seal of Trust
                   </h4>
                   <p className="text-xs text-gold-400 font-medium text-center sm:text-left">
                     {siteContent.consultant.reraNumber}

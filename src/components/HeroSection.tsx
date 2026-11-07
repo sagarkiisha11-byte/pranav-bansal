@@ -156,7 +156,7 @@ export default function HeroSection() {
                 <div className="relative aspect-[4/5] w-full">
                   <Image
                     src={siteContent.consultant.portraitImage}
-                    alt="Pranav Bansal, Real Estate Consultant at Gaurav Estates"
+                    alt="Pranav Bansal, Real Estate Consultant"
                     fill
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
@@ -171,13 +171,13 @@ export default function HeroSection() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-[11px] tracking-[0.2em] uppercase font-bold text-gold-400">
-                        Real Estate Consultant
+                        Private Advisory
                       </p>
                       <h3 className="font-serif text-2xl font-bold text-white tracking-wide">
                         {siteContent.consultant.name}
                       </h3>
                       <p className="text-xs text-neutral-400">
-                        {siteContent.brand.name}
+                        Real Estate Consultant
                       </p>
                     </div>
 

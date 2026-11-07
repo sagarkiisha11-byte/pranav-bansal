@@ -50,7 +50,7 @@ export default function ServicesSection() {
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4"
           >
             Comprehensive Real Estate Services by{" "}
-            <span className="text-gold-gradient">Gaurav Estates</span>
+            <span className="text-gold-gradient">Pranav Bansal</span>
           </motion.h2>
 
           <motion.p
@@ -129,7 +129,7 @@ export default function ServicesSection() {
                 <a
                   href={`https://wa.me/919988885889?text=Hello%20Pranav,%20I%20am%20interested%20in%20consulting%20on%20${encodeURIComponent(
                     service.title
-                  )}%20with%20Gaurav%20Estates.`}
+                  )}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-3 py-1.5 rounded-lg border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 hover:bg-emerald-900/40 text-xs font-medium flex items-center space-x-1.5 transition-colors"

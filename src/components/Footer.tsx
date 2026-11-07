@@ -15,12 +15,12 @@ export default function Footer() {
       <div className="border-b border-white/5 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-            <div className="h-12 sm:h-14 w-auto flex items-center justify-center">
+            <div className="h-10 sm:h-12 w-auto flex items-center justify-center">
               <Image
-                src="/logo.png"
-                alt="Gaurav Estates - Comprehensive Real Estate Services"
-                width={816}
-                height={461}
+                src="/assets/logo.png"
+                alt="Pranav Bansal - Real Estate Consultant"
+                width={782}
+                height={136}
                 className="h-full w-auto object-contain"
               />
             </div>
@@ -54,7 +54,7 @@ export default function Footer() {
               About The Consultancy
             </h4>
             <p className="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed max-w-sm mx-auto lg:mx-0 text-center lg:text-left">
-              Gaurav Estates is a boutique real estate consultancy headed by Pranav Bansal, dedicated to high-value residential homes, commercial hubs, freehold land, and pre-leased investments across the Tricity and North India corridors.
+              Pranav Bansal is a real estate consultant associated with Gaurav Estates, dedicated to high-value residential homes, commercial hubs, freehold land, and pre-leased investments across the Tricity and North India corridors.
             </p>
             <div className="pt-2 flex items-center justify-center lg:justify-start space-x-3 text-xs text-gold-300">
               <ShieldCheck className="w-4 h-4 text-gold-400" />
@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#why-us" className="hover:text-gold-300 transition-colors">
-                  Why Choose Gaurav Estates
+                  Why Choose Pranav Bansal
                 </a>
               </li>
               <li>
@@ -154,8 +154,7 @@ export default function Footer() {
       <div className="border-t border-white/5 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 text-center sm:text-left">
           <p>
-            © {new Date().getFullYear()} {siteContent.brand.name}. All rights reserved. Consulting by{" "}
-            <strong className="text-neutral-300">{siteContent.consultant.name}</strong>.
+            © 2026 Pranav Bansal. All rights reserved.
           </p>
 
           <p className="text-[11px] text-neutral-400 max-w-md text-center sm:text-right">

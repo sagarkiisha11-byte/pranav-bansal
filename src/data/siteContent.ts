@@ -58,8 +58,8 @@ export interface FAQItem {
 
 export const siteContent = {
   brand: {
-    name: "Gaurav Estates",
-    shortName: "Gaurav Estates",
+    name: "Pranav Bansal",
+    shortName: "Pranav Bansal",
     tagline: "Buy | Sell | Invest",
     slogans: {
       primary: "Good People Build Great Places",
@@ -72,12 +72,12 @@ export const siteContent = {
   consultant: {
     name: "Pranav Bansal",
     title: "Senior Real Estate Consultant & Wealth Advisor",
-    designation: "Founder & Principal Advisor, Gaurav Estates",
+    designation: "Senior Real Estate Consultant & Wealth Advisor",
     experienceYears: 12,
     phone: "9988885889",
     phoneDisplay: "+91 99888 85889",
     phoneTel: "tel:9988885889",
-    whatsappUrl: "https://wa.me/919988885889?text=Hello%20Pranav,%20I%20would%20like%20to%20consult%20with%20you%20regarding%20prime%20real%20estate%20opportunities%20at%20Gaurav%20Estates.",
+    whatsappUrl: "https://wa.me/919988885889?text=Hello%20Pranav,%20I%20would%20like%20to%20consult%20with%20you%20regarding%20prime%20real%20estate%20opportunities.",
     email: "pranavbansal.estates@gmail.com",
     address: {
       street: "SCO 42-43, Ground Floor, Inner Market, Sector 9-D",
@@ -90,7 +90,7 @@ export const siteContent = {
     hours: "Monday – Saturday: 9:30 AM – 7:30 PM | Sunday by VIP Appointment",
     portraitImage: "/pranav-bansal.jpg", // High-end professional consultant portrait placeholder
     bio: [
-      "With over a decade of dedicated market mastery, Pranav Bansal has established Gaurav Estates as the pinnacle of bespoke real estate advisory. Grounded in the enduring ethos that 'Good People Build Great Places', Pranav curates high-value residential homes, iconic commercial assets, and strategic land portfolios for discerning business leaders, NRIs, and forward-thinking families.",
+      "With over a decade of dedicated market mastery, Pranav Bansal has established himself as the pinnacle of bespoke real estate advisory. Grounded in the enduring ethos that 'Good People Build Great Places', Pranav curates high-value residential homes, iconic commercial assets, and strategic land portfolios for discerning business leaders, NRIs, and forward-thinking families.",
       "Beyond mere brokerage, Pranav operates as a private wealth strategist. Every acquisition undergoes exhaustive title verification, market momentum audits, and cash-flow stress testing — turning real estate from an ordinary purchase into generational prosperity.",
     ],
     reraNumber: "HRERA / PRERA Reg. Verified Advisory",
@@ -349,7 +349,7 @@ export const siteContent = {
       role: "Senior Orthopedic Surgeon & Radiologist",
       location: "Panchkula",
       content:
-        "Finding our dream family villa seemed exhausting until we met Pranav. His calm demeanor, deep legal verification of the builder's title, and complete absence of sales pressure made us feel completely secure. Gaurav Estates truly lives up to its motto.",
+        "Finding our dream family villa seemed exhausting until we met Pranav. His calm demeanor, deep legal verification of the builder's title, and complete absence of sales pressure made us feel completely secure. Pranav truly lives up to his motto.",
       rating: 5,
       propertyType: "5 BHK Luxury Villa",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
@@ -387,7 +387,7 @@ export const siteContent = {
     {
       question: "How do you ensure the legal safety and title clearance of properties?",
       answer:
-        "Every single asset recommended by Gaurav Estates undergoes multi-tiered verification: 30-year revenue department search, RERA registration status, sanctioned master plans, occupancy certificate (OC) checks, and mortgage non-encumbrance certificates vetted by qualified legal counsels.",
+        "Every single asset recommended by Pranav Bansal undergoes multi-tiered verification: 30-year revenue department search, RERA registration status, sanctioned master plans, occupancy certificate (OC) checks, and mortgage non-encumbrance certificates vetted by qualified legal counsels.",
     },
     {
       question: "What rental yield can I expect from pre-leased commercial investments?",

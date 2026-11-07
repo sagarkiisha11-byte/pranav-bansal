@@ -251,7 +251,7 @@ export default function ContactSection() {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <p className="font-serif text-sm font-bold text-white">
-                    Gaurav Estates Head Office
+                    Pranav Bansal – Consultancy Office
                   </p>
                   <p className="text-[11px] text-neutral-400 max-w-xs">
                     SCO 42-43, Ground Floor, Sector 9-D, Chandigarh

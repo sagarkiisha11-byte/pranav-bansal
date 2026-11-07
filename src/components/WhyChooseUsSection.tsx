@@ -38,22 +38,22 @@ export default function WhyChooseUsSection() {
   const comparisons = [
     {
       feature: "Legal Title Verification",
-      gaurav: "30-Year Revenue Search & Non-Encumbrance Audit",
+      pranav: "30-Year Revenue Search & Non-Encumbrance Audit",
       traditional: "Basic verbal assurances or seller claims",
     },
     {
       feature: "Pricing Transparency",
-      gaurav: "Zero hidden margins, direct developer terms",
+      pranav: "Zero hidden margins, direct developer terms",
       traditional: "Inflated quotes with multi-tier broker cuts",
     },
     {
       feature: "Investment Advisory",
-      gaurav: "Data-backed cash flow & yield analysis (8-10%)",
+      pranav: "Data-backed cash flow & yield analysis (8-10%)",
       traditional: "Speculative hype without verified lease locks",
     },
     {
       feature: "Post-Sale Handholding",
-      gaurav: "Sub-registrar deed, mutation, tenant leasing",
+      pranav: "Sub-registrar deed, mutation, tenant leasing",
       traditional: "Communication ends as soon as commission is paid",
     },
   ];
@@ -140,7 +140,7 @@ export default function WhyChooseUsSection() {
           ))}
         </div>
 
-        {/* Visual Comparison: The Gaurav Estates Difference */}
+        {/* Visual Comparison: The Pranav Bansal Difference */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ export default function WhyChooseUsSection() {
                 Institutional Rigor
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">
-                The Gaurav Estates Standard vs Traditional Brokerage
+                The Pranav Bansal Standard vs Traditional Brokerage
               </h3>
             </div>
 
@@ -173,7 +173,7 @@ export default function WhyChooseUsSection() {
                 <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-neutral-400">
                   <th className="py-3 px-4 w-1/3">Key Evaluation Metric</th>
                   <th className="py-3 px-4 w-1/3 text-gold-300 font-bold bg-gold-400/10 rounded-t-xl">
-                    ★ Gaurav Estates (Pranav Bansal)
+                    ★ Pranav Bansal
                   </th>
                   <th className="py-3 px-4 w-1/3 text-neutral-400">
                     Typical Market Broker
@@ -189,7 +189,7 @@ export default function WhyChooseUsSection() {
                     <td className="py-4 px-4 text-neutral-100 font-medium bg-gold-400/[0.04]">
                       <div className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-gold-400 shrink-0" />
-                        <span>{item.gaurav}</span>
+                        <span>{item.pranav}</span>
                       </div>
                     </td>
                     <td className="py-4 px-4 text-neutral-400">

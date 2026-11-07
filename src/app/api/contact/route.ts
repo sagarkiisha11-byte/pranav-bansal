@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       requirementType: requirementType || "General Consultation",
       budget: budget || "Not specified",
       message: message ? message.trim() : "",
-      leadSource: "Gaurav Estates Website Contact Form",
+      leadSource: "Pranav Bansal Website Contact Form",
       assignedTo: "Pranav Bansal (9988885889)",
     };
 
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
         success: true,
         message:
           "Thank you for reaching out. Pranav Bansal will review your inquiry and contact you shortly.",
-        leadId: `GE-${Date.now().toString().slice(-6)}`,
+        leadId: `PB-${Date.now().toString().slice(-6)}`,
       },
       { status: 200 }
     );

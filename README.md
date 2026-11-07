@@ -1,13 +1,13 @@
-# GAURAV ESTATES — PRANAV BANSAL
+# PRANAV BANSAL — LUXURY REAL ESTATE CONSULTANT
 ### Premium Personal Brand & Real Estate Advisory Website
 
-A luxury, fully responsive, high-performance web experience built for **Pranav Bansal**, Senior Real Estate Consultant & Wealth Advisor operating under the **Gaurav Estates** brand.
+A luxury, fully responsive, high-performance web experience built for **Pranav Bansal**, Senior Real Estate Consultant & Wealth Advisor.
 
 ---
 
 ## 🏛️ Brand Details & Identity
 
-- **Brand Name**: Gaurav Estates
+- **Brand Name**: Pranav Bansal
 - **Tagline**: `Buy | Sell | Invest`
 - **Guiding Slogans**:
   - *"Good People Build Great Places"*
@@ -39,12 +39,12 @@ A luxury, fully responsive, high-performance web experience built for **Pranav B
 
 ## 📑 Pages & Section Architecture
 
-1. **Preloader / Intro Reveal**: Luxury gold monogram emblem `GE` revealing *"GAURAV ESTATES"* and slogan *"Good People Build Great Places"* with smooth exit.
+1. **Preloader / Intro Reveal**: Luxury gold PB monogram emblem revealing *"PRANAV BANSAL"* and slogan *"Good People Build Great Places"* with smooth exit.
 2. **Sticky Glassmorphism Navbar**: Micro announcement bar + glassmorphism header, brand logo, section anchors, WhatsApp quick button, and click-to-call CTA.
 3. **Hero Section**: High-impact luxury headline, tagline reveal, Pranav Bansal portrait showcase, verified consultant badge, floating metric cards (`₹280 Cr+`, `12+ Years`), and dual primary CTAs.
 4. **About Pranav Bansal**: Bio as an independent advisor vs traditional brokerage, 4 core commitments, and 4 animated counters that trigger on scroll (`12+ Years`, `500+ Clients`, `350+ Assets`, `₹280 Cr+ Volume`).
 5. **Services Section**: 4 premium animated glass cards featuring highlights, badges, direct enquiry hooks, and WhatsApp direct consultation triggers.
-6. **Why Choose Us Section**: 6 trust pillars (Transparent Dealings, Hyper-Local Mastery, White Glove Support, High-Yield Guidance, Legal Audits, HNI/NRI Discretion) plus a comparison table showing the Gaurav Estates advantage.
+6. **Why Choose Us Section**: 6 trust pillars (Transparent Dealings, Hyper-Local Mastery, White Glove Support, High-Yield Guidance, Legal Audits, HNI/NRI Discretion) plus a comparison table showing the Pranav Bansal advantage.
 7. **Featured Properties**: Easily editable curated property cards with category filtering (*All, Residential, Commercial, Land & Plots, Investment*), specs (configuration, area, status), price tags, and direct inspection booking.
 8. **Testimonials Slider**: Animated auto-playing carousel with pause-on-hover, 5-star ratings, transacted property badges, and authentic testimonials.
 9. **FAQ Section**: Accordion answering legal title audits, pre-leased ROI, NRI remote purchases, and zero initial fee policies.

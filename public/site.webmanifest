@@ -1,6 +1,6 @@
 {
-  "name": "Gaurav Estates - Pranav Bansal",
-  "short_name": "Gaurav Estates",
+  "name": "Pranav Bansal - Real Estate Consultant",
+  "short_name": "Pranav Bansal",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0B1F3F",
-  "background_color": "#0B1F3F",
+  "theme_color": "#07080B",
+  "background_color": "#07080B",
   "display": "standalone",
   "start_url": "/"
 }
