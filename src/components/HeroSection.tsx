@@ -7,10 +7,10 @@ import { siteContent } from "@/data/siteContent";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-[92vh] flex items-center pt-8 pb-16 lg:py-24 overflow-hidden">
-      {/* Ambient background lighting */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-400/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[160px] pointer-events-none" />
+    <section id="hero" className="relative min-h-[92vh] flex items-center pt-6 pb-14 sm:pt-8 sm:pb-16 lg:py-24 overflow-hidden">
+      {/* Ambient background lighting - taming dimensions on mobile to prevent GPU jank and overflow */}
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-gold-400/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-64 h-64 sm:w-[500px] sm:h-[500px] bg-gold-500/5 rounded-full blur-[110px] sm:blur-[160px] pointer-events-none" />
 
       {/* Subtle grid pattern */}
       <div
@@ -30,10 +30,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 backdrop-blur-md mb-6 w-fit mx-auto lg:mx-0"
+              className="inline-flex items-center space-x-2 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 backdrop-blur-md mb-6 w-fit mx-auto lg:mx-0 max-w-full"
             >
-              <Sparkles className="w-3.5 h-3.5 text-gold-300" />
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-300">
+              <Sparkles className="w-3.5 h-3.5 text-gold-300 shrink-0" />
+              <span className="text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-[0.2em] font-semibold text-gold-300 truncate">
                 {siteContent.brand.name} • {siteContent.consultant.title}
               </span>
             </motion.div>
@@ -79,19 +79,19 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* CTAs */}
+            {/* CTAs - Mobile full width min 48px tap targets, desktop inline */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10 w-full"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-10 w-full"
             >
               {/* Primary Call CTA */}
               <a
                 href={siteContent.consultant.phoneTel}
-                className="btn-luxury-gold px-7 py-4 rounded-xl text-sm sm:text-base font-semibold flex items-center space-x-3 shadow-gold-glow-lg group"
+                className="btn-luxury-gold w-full sm:w-auto min-h-[48px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-semibold flex items-center justify-center space-x-3 shadow-gold-glow-lg group"
               >
-                <Phone className="w-4 h-4 transition-transform group-hover:rotate-12" />
+                <Phone className="w-4 h-4 transition-transform group-hover:rotate-12 shrink-0" />
                 <span>Call for Consultation</span>
                 <span className="text-xs opacity-85 font-mono">({siteContent.consultant.phone})</span>
               </a>
@@ -99,10 +99,10 @@ export default function HeroSection() {
               {/* Secondary Services CTA */}
               <a
                 href="#services"
-                className="btn-luxury-outline px-6 py-4 rounded-xl text-sm sm:text-base font-medium flex items-center space-x-2 group"
+                className="btn-luxury-outline w-full sm:w-auto min-h-[48px] px-6 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-medium flex items-center justify-center space-x-2 group"
               >
                 <span>Our Services</span>
-                <ArrowRight className="w-4 h-4 text-gold-300 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 text-gold-300 transition-transform group-hover:translate-x-1 shrink-0" />
               </a>
 
               {/* WhatsApp direct button */}
@@ -110,11 +110,11 @@ export default function HeroSection() {
                 href={siteContent.consultant.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 hover:bg-emerald-900/30 hover:border-emerald-500/60 transition-all text-sm font-medium flex items-center space-x-2"
+                className="w-full sm:w-auto min-h-[48px] px-4 py-3.5 sm:py-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 hover:bg-emerald-900/30 hover:border-emerald-500/60 transition-all text-sm font-medium flex items-center justify-center space-x-2"
                 title="Direct WhatsApp"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
-                <span className="hidden sm:inline">WhatsApp</span>
+                <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>WhatsApp Priority</span>
               </a>
             </motion.div>
 
@@ -166,23 +166,23 @@ export default function HeroSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/30 to-transparent" />
                 </div>
 
-                {/* Bottom Overlay Label */}
-                <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-[#07080B] via-[#07080B]/90 to-transparent pt-8">
+                {/* Bottom Overlay Label - well spaced so it's never overlapped */}
+                <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-gradient-to-t from-[#07080B] via-[#07080B]/90 to-transparent pt-8">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-[11px] tracking-[0.2em] uppercase font-bold text-gold-400">
+                      <p className="text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-bold text-gold-400">
                         Private Advisory
                       </p>
-                      <h3 className="font-serif text-2xl font-bold text-white tracking-wide">
+                      <h3 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide">
                         {siteContent.consultant.name}
                       </h3>
-                      <p className="text-xs text-neutral-400">
+                      <p className="text-[11px] sm:text-xs text-neutral-400">
                         Real Estate Consultant
                       </p>
                     </div>
 
-                    <div className="px-3 py-1.5 rounded-lg border border-gold-400/30 bg-gold-400/10 backdrop-blur-md">
-                      <span className="text-[11px] font-mono font-semibold text-gold-300">
+                    <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-gold-400/30 bg-gold-400/10 backdrop-blur-md">
+                      <span className="text-[10px] sm:text-[11px] font-mono font-semibold text-gold-300">
                         VERIFIED
                       </span>
                     </div>
@@ -190,12 +190,47 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Floating Metric Card 1: Top Right */}
+              {/* Mobile-Only Metric Cards Grid: Fully contained, 0% overflow, zero overlap with caption */}
+              <div className="grid grid-cols-2 gap-3 mt-4 sm:hidden w-full relative z-20">
+                <div className="glass-card p-3 rounded-2xl border border-gold-400/30 shadow-luxury-card backdrop-blur-xl">
+                  <div className="flex items-center space-x-2.5">
+                    <div className="w-9 h-9 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center text-gold-300 shrink-0">
+                      <TrendingUp className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-serif text-lg font-bold text-white truncate">
+                        ₹280 Cr+
+                      </div>
+                      <div className="text-[10px] text-neutral-300 tracking-wide truncate">
+                        Assets Consulted
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="glass-card p-3 rounded-2xl border border-gold-400/30 shadow-luxury-card backdrop-blur-xl">
+                  <div className="flex items-center space-x-2.5">
+                    <div className="w-9 h-9 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center text-gold-300 shrink-0">
+                      <Award className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-serif text-lg font-bold text-white truncate">
+                        12+ Years
+                      </div>
+                      <div className="text-[10px] text-neutral-300 tracking-wide truncate">
+                        Market Leadership
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Metric Card 1: Top Right (Tablet & Desktop: untouched layout) */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="absolute -top-4 -right-4 sm:-right-6 glass-card p-3 sm:p-4 rounded-2xl border border-gold-400/30 shadow-luxury-card backdrop-blur-xl"
+                className="hidden sm:block absolute -top-4 -right-4 sm:-right-6 glass-card p-3 sm:p-4 rounded-2xl border border-gold-400/30 shadow-luxury-card backdrop-blur-xl"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center text-gold-300">
@@ -212,12 +247,12 @@ export default function HeroSection() {
                 </div>
               </motion.div>
 
-              {/* Floating Metric Card 2: Bottom Left */}
+              {/* Floating Metric Card 2: Bottom Left (Tablet & Desktop: untouched layout) */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="absolute -bottom-4 -left-4 sm:-left-6 glass-card p-3 sm:p-4 rounded-2xl border border-gold-400/30 shadow-luxury-card backdrop-blur-xl"
+                className="hidden sm:block absolute -bottom-4 -left-4 sm:-left-6 glass-card p-3 sm:p-4 rounded-2xl border border-gold-400/30 shadow-luxury-card backdrop-blur-xl"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-xl bg-gold-400/15 border border-gold-400/30 flex items-center justify-center text-gold-300">

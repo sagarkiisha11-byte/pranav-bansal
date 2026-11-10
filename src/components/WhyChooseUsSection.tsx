@@ -59,9 +59,9 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="why-us" className="relative py-20 lg:py-28 bg-[#090B10] border-t border-b border-white/5">
+    <section id="why-us" className="relative py-14 sm:py-16 md:py-20 lg:py-28 bg-[#090B10] border-t border-b border-white/5 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-400/5 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-[600px] sm:h-[600px] bg-gold-400/5 rounded-full blur-[100px] sm:blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -167,7 +167,44 @@ export default function WhyChooseUsSection() {
             </a>
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Mobile Stacked Comparison Cards (under md:) */}
+          <div className="space-y-4 md:hidden">
+            {comparisons.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-4 rounded-2xl bg-obsidian-950/70 border border-gold-400/20 space-y-3"
+              >
+                <div className="text-xs font-semibold uppercase tracking-wider text-gold-300 pb-2 border-b border-white/5">
+                  {item.feature}
+                </div>
+
+                {/* Pranav Bansal Advantage */}
+                <div className="p-3 rounded-xl bg-gold-400/10 border border-gold-400/30 space-y-1">
+                  <div className="flex items-center space-x-1.5 text-xs font-bold text-gold-300">
+                    <Check className="w-3.5 h-3.5 text-gold-400 shrink-0" />
+                    <span>★ Pranav Bansal</span>
+                  </div>
+                  <p className="text-xs text-neutral-100 font-medium leading-relaxed pl-5">
+                    {item.pranav}
+                  </p>
+                </div>
+
+                {/* Typical Broker */}
+                <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                  <div className="flex items-center space-x-1.5 text-xs font-medium text-neutral-400">
+                    <X className="w-3.5 h-3.5 text-red-400/70 shrink-0" />
+                    <span>Typical Market Broker</span>
+                  </div>
+                  <p className="text-xs text-neutral-400 leading-relaxed pl-5">
+                    {item.traditional}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop & Tablet Table (md: and above, untouched layout) */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left text-sm border-collapse min-w-[600px]">
               <thead>
                 <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-neutral-400">

@@ -26,9 +26,9 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="relative py-20 lg:py-28 bg-[#090B0F] border-t border-b border-white/5">
+    <section id="about" className="relative py-14 sm:py-16 md:py-20 lg:py-28 bg-[#090B0F] border-t border-b border-white/5 overflow-hidden">
       {/* Ambient background light */}
-      <div className="absolute top-1/2 right-0 w-80 h-80 bg-gold-400/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-48 h-48 sm:w-80 sm:h-80 bg-gold-400/5 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -72,8 +72,8 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* Left Column: Bio & Core Values */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-7 space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start"
@@ -127,21 +127,21 @@ export default function AboutSection() {
             </div>
 
             {/* Consultant Actions */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full">
+            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full">
               <a
                 href={siteContent.consultant.phoneTel}
-                className="btn-luxury-gold px-6 py-3 rounded-xl text-sm font-semibold flex items-center space-x-2"
+                className="btn-luxury-gold w-full sm:w-auto min-h-[48px] px-6 py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center space-x-2"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 shrink-0" />
                 <span>Call Pranav Directly ({siteContent.consultant.phone})</span>
               </a>
 
               <a
                 href="#contact"
-                className="btn-luxury-outline px-6 py-3 rounded-xl text-sm font-medium flex items-center space-x-2"
+                className="btn-luxury-outline w-full sm:w-auto min-h-[48px] px-6 py-3.5 rounded-xl text-sm font-medium flex items-center justify-center space-x-2"
               >
                 <span>Schedule Confidential Meeting</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 shrink-0" />
               </a>
             </div>
           </motion.div>
@@ -149,8 +149,8 @@ export default function AboutSection() {
           {/* Right Column: Animated Stats & Trust Showcase */}
           <div className="lg:col-span-5 flex flex-col space-y-6">
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
               className="grid grid-cols-2 gap-4"

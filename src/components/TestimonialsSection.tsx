@@ -33,9 +33,9 @@ export default function TestimonialsSection() {
   const current = testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="relative py-20 lg:py-28 bg-[#090B10] border-t border-b border-white/5 overflow-hidden">
+    <section id="testimonials" className="relative py-14 sm:py-16 md:py-20 lg:py-28 bg-[#090B10] border-t border-b border-white/5 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-96 h-96 bg-gold-400/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-gold-400/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -163,14 +163,14 @@ export default function TestimonialsSection() {
               <div className="flex items-center space-x-3">
                 <button
                   onClick={prevSlide}
-                  className="p-3 rounded-full border border-gold-400/20 bg-obsidian-850 text-neutral-300 hover:text-white hover:border-gold-400/60 hover:bg-gold-400/10 transition-colors"
+                  className="w-11 h-11 rounded-full border border-gold-400/20 bg-obsidian-850 text-neutral-300 hover:text-white hover:border-gold-400/60 hover:bg-gold-400/10 transition-colors flex items-center justify-center shrink-0"
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="p-3 rounded-full border border-gold-400/20 bg-obsidian-850 text-neutral-300 hover:text-white hover:border-gold-400/60 hover:bg-gold-400/10 transition-colors"
+                  className="w-11 h-11 rounded-full border border-gold-400/20 bg-obsidian-850 text-neutral-300 hover:text-white hover:border-gold-400/60 hover:bg-gold-400/10 transition-colors flex items-center justify-center shrink-0"
                   aria-label="Next testimonial"
                 >
                   <ChevronRight className="w-5 h-5" />

@@ -150,9 +150,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar: Copyright & Back to Top */}
-      <div className="border-t border-white/5 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 text-center sm:text-left">
+      {/* Bottom Bar: Copyright & Back to Top (with pb-28 on mobile so floating dock never overlaps footer content) */}
+      <div className="border-t border-white/5 py-6 pb-[max(6.5rem,calc(env(safe-area-inset-bottom,0px)+5.5rem))] md:pb-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-300 text-center sm:text-left">
           <p>
             © 2026 Pranav Bansal. All rights reserved.
           </p>
@@ -163,7 +163,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center space-x-2 text-gold-300 hover:text-white p-2 rounded-lg bg-obsidian-850 border border-gold-400/20 hover:border-gold-400/50 transition-colors shrink-0"
+            className="flex items-center space-x-2 text-gold-300 hover:text-white min-h-[44px] px-3.5 py-2 rounded-xl bg-obsidian-850 border border-gold-400/20 hover:border-gold-400/50 transition-colors shrink-0"
             aria-label="Back to top"
           >
             <span>Back to top</span>

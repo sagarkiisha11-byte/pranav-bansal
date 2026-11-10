@@ -11,6 +11,18 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
@@ -134,11 +146,11 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* Mobile Menu Hamburger */}
+            {/* Mobile Menu Hamburger & Quick Call (min 44px tap targets) */}
             <div className="lg:hidden flex items-center space-x-2">
               <a
                 href={`tel:${siteContent.consultant.phone}`}
-                className="btn-luxury-gold p-2 rounded-lg text-xs font-semibold sm:hidden"
+                className="btn-luxury-gold w-11 h-11 rounded-xl text-xs font-semibold sm:hidden flex items-center justify-center shrink-0"
                 aria-label="Call Pranav Bansal"
               >
                 <Phone className="w-4 h-4" />
@@ -146,10 +158,10 @@ export default function Navbar() {
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-xl border border-gold-400/20 bg-obsidian-850 text-gold-300 hover:text-white hover:border-gold-400/50 transition-colors focus:outline-none"
+                className="w-11 h-11 rounded-xl border border-gold-400/20 bg-obsidian-850 text-gold-300 hover:text-white hover:border-gold-400/50 transition-colors focus:outline-none flex items-center justify-center shrink-0"
                 aria-label="Toggle navigation menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -163,15 +175,15 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-obsidian-900/98 border-b border-gold-400/20 px-5 pt-3 pb-6 backdrop-blur-2xl"
+              className="lg:hidden bg-obsidian-900/98 border-b border-gold-400/20 px-5 pt-3 pb-6 backdrop-blur-2xl max-h-[85vh] overflow-y-auto"
             >
-              <div className="flex flex-col space-y-2 mb-5">
+              <div className="flex flex-col space-y-1 mb-5">
                 {siteContent.navLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2.5 px-3 rounded-lg text-neutral-200 hover:text-gold-300 hover:bg-gold-400/10 text-base font-medium transition-colors"
+                    className="flex items-center justify-between min-h-[48px] py-3 px-3.5 rounded-xl text-neutral-200 hover:text-gold-300 hover:bg-gold-400/10 text-base font-medium transition-colors"
                   >
                     <span>{link.label}</span>
                     <ArrowUpRight className="w-4 h-4 text-gold-400/60" />
@@ -189,7 +201,7 @@ export default function Navbar() {
                 <a
                   href={`tel:${siteContent.consultant.phone}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="btn-luxury-gold w-full py-3 rounded-xl flex items-center justify-center space-x-2 text-sm font-semibold"
+                  className="btn-luxury-gold w-full min-h-[48px] py-3.5 rounded-xl flex items-center justify-center space-x-2 text-sm font-semibold"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call {siteContent.consultant.phoneDisplay}</span>
@@ -200,7 +212,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-950/30 text-emerald-300 flex items-center justify-center space-x-2 text-sm font-medium hover:bg-emerald-900/40 transition-colors"
+                  className="w-full min-h-[48px] py-3.5 rounded-xl border border-emerald-500/40 bg-emerald-950/30 text-emerald-300 flex items-center justify-center space-x-2 text-sm font-medium hover:bg-emerald-900/40 transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Chat on WhatsApp</span>

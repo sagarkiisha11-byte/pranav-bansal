@@ -21,10 +21,10 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="relative py-20 lg:py-28 bg-[#07080B] overflow-hidden">
+    <section id="services" className="relative py-14 sm:py-16 md:py-20 lg:py-28 bg-[#07080B] overflow-hidden">
       {/* Ambient background glows */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-gold-400/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-gold-400/5 rounded-full blur-[100px] sm:blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-gold-500/5 rounded-full blur-[100px] sm:blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -73,10 +73,10 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.12 }}
-              className="glass-card glass-card-hover rounded-3xl p-8 relative flex flex-col justify-between group overflow-hidden border border-gold-400/20"
+              className="glass-card glass-card-hover rounded-3xl p-6 sm:p-8 relative flex flex-col justify-between group overflow-hidden border border-gold-400/20 isolate"
             >
               {/* Subtle gold corner highlight */}
-              <div className="absolute -top-12 -right-12 w-32 h-32 bg-gold-400/10 rounded-full blur-2xl group-hover:bg-gold-400/20 transition-all duration-500" />
+              <div className="absolute top-0 right-0 w-28 h-28 bg-gold-400/10 rounded-full blur-2xl group-hover:bg-gold-400/20 transition-all duration-500 pointer-events-none" />
 
               <div>
                 {/* Header: Icon & Badge */}

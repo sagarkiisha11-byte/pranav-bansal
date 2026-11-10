@@ -33,10 +33,10 @@ export default function PropertiesSection() {
         );
 
   return (
-    <section id="properties" className="relative py-20 lg:py-28 bg-[#07080B] overflow-hidden">
+    <section id="properties" className="relative py-14 sm:py-16 md:py-20 lg:py-28 bg-[#07080B] overflow-hidden">
       {/* Ambient background lighting */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-gold-400/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-gold-500/5 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -89,14 +89,14 @@ export default function PropertiesSection() {
           </div>
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="flex items-center justify-center md:justify-start space-x-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
-          <div className="flex items-center space-x-2 p-1.5 rounded-2xl bg-obsidian-850/80 border border-white/10 backdrop-blur-md">
+        {/* Category Filter Tabs - Smooth horizontal scroll without clipping */}
+        <div className="w-full overflow-x-auto pb-3 mb-8 sm:mb-10 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="inline-flex items-center space-x-1.5 sm:space-x-2 p-1.5 rounded-2xl bg-obsidian-850/80 border border-white/10 backdrop-blur-md min-w-max">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
+                className={`min-h-[44px] px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all whitespace-nowrap flex items-center justify-center ${
                   selectedCategory === cat
                     ? "bg-gold-gradient text-obsidian-950 font-bold shadow-gold-glow"
                     : "text-neutral-300 hover:text-white hover:bg-white/5"
@@ -205,7 +205,7 @@ export default function PropertiesSection() {
                       )}%20(${property.location})%20priced%20at%20${encodeURIComponent(property.price)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-2.5 px-3 rounded-xl border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 hover:bg-emerald-900/30 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors"
+                      className="flex-1 min-h-[44px] py-2.5 px-3 rounded-xl border border-emerald-500/30 bg-emerald-950/20 text-emerald-300 hover:bg-emerald-900/30 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors"
                     >
                       <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
                       <span>WhatsApp Info</span>
@@ -213,7 +213,7 @@ export default function PropertiesSection() {
 
                     <a
                       href={`tel:${siteContent.consultant.phone}`}
-                      className="btn-luxury-gold py-2.5 px-3.5 rounded-xl text-xs font-bold flex items-center justify-center space-x-1.5 shadow-sm"
+                      className="btn-luxury-gold min-h-[44px] py-2.5 px-3.5 rounded-xl text-xs font-bold flex items-center justify-center space-x-1.5 shadow-sm"
                       title="Call to schedule inspection"
                     >
                       <Phone className="w-3.5 h-3.5" />

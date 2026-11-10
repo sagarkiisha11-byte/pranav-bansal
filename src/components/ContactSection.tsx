@@ -74,9 +74,9 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-20 lg:py-28 bg-[#090B10] border-t border-white/5 overflow-hidden">
+    <section id="contact" className="relative py-14 sm:py-16 md:py-20 lg:py-28 bg-[#090B10] border-t border-white/5 overflow-hidden">
       {/* Ambient background glows */}
-      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-gold-400/5 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-48 h-48 sm:w-[500px] sm:h-[500px] bg-gold-400/5 rounded-full blur-[100px] sm:blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -119,8 +119,8 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14">
           {/* Left Column: Direct Contact & Location Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-5 flex flex-col justify-between space-y-8 text-center lg:text-left items-center lg:items-start"
@@ -271,8 +271,8 @@ export default function ContactSection() {
 
           {/* Right Column: Interactive Consultation Request Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-7"
@@ -322,7 +322,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-left"
                     >
                       Full Name *
                     </label>
@@ -331,10 +331,11 @@ export default function ContactSection() {
                       id="name"
                       name="name"
                       required
+                      autoComplete="name"
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Vikram Malhotra"
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors text-center sm:text-left"
+                      className="w-full min-h-[48px] px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-base sm:text-sm transition-colors text-left"
                     />
                   </div>
 
@@ -342,7 +343,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-left"
                     >
                       Phone Number *
                     </label>
@@ -351,10 +352,12 @@ export default function ContactSection() {
                       id="phone"
                       name="phone"
                       required
+                      inputMode="tel"
+                      autoComplete="tel"
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="e.g. 9988885889"
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors text-center sm:text-left"
+                      className="w-full min-h-[48px] px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-base sm:text-sm transition-colors text-left"
                     />
                   </div>
                 </div>
@@ -364,7 +367,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-left"
                     >
                       Email Address
                     </label>
@@ -372,10 +375,12 @@ export default function ContactSection() {
                       type="email"
                       id="email"
                       name="email"
+                      inputMode="email"
+                      autoComplete="email"
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="name@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors text-center sm:text-left"
+                      className="w-full min-h-[48px] px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-base sm:text-sm transition-colors text-left"
                     />
                   </div>
 
@@ -383,7 +388,7 @@ export default function ContactSection() {
                   <div>
                     <label
                       htmlFor="requirementType"
-                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
+                      className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-left"
                     >
                       Interest Area
                     </label>
@@ -392,7 +397,7 @@ export default function ContactSection() {
                       name="requirementType"
                       value={formData.requirementType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-sm transition-colors cursor-pointer text-center sm:text-left"
+                      className="w-full min-h-[48px] px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm transition-colors cursor-pointer text-left"
                     >
                       <option value="Residential Properties">Residential Properties (Villas/Condos)</option>
                       <option value="Commercial Spaces">Commercial Spaces (Offices/SCOs)</option>
@@ -407,7 +412,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="budget"
-                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
+                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-left"
                   >
                     Target Budget Range
                   </label>
@@ -416,7 +421,7 @@ export default function ContactSection() {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-sm transition-colors cursor-pointer text-center sm:text-left"
+                    className="w-full min-h-[48px] px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-base sm:text-sm transition-colors cursor-pointer text-left"
                   >
                     <option value="₹75L - ₹1.5 Cr">₹75 Lakh - ₹1.5 Crore</option>
                     <option value="₹1.5 Cr - ₹3 Cr">₹1.5 Crore - ₹3 Crore</option>
@@ -430,7 +435,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-center sm:text-left"
+                    className="block text-xs uppercase tracking-wider font-medium text-neutral-300 mb-2 text-left"
                   >
                     Your Requirements & Timeline
                   </label>
@@ -441,7 +446,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Provide details about your preferred location, expected handover timeline, or specific property features..."
-                    className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-sm transition-colors resize-none text-center sm:text-left"
+                    className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 text-base sm:text-sm transition-colors resize-none text-left"
                   />
                 </div>
 
@@ -449,9 +454,9 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="btn-luxury-gold w-full py-4 rounded-xl text-sm sm:text-base font-semibold flex items-center justify-center space-x-2 shadow-gold-glow transition-transform disabled:opacity-50"
+                  className="btn-luxury-gold w-full min-h-[50px] py-4 rounded-xl text-sm sm:text-base font-semibold flex items-center justify-center space-x-2 shadow-gold-glow transition-transform disabled:opacity-50"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4 shrink-0" />
                   <span>
                     {status === "loading"
                       ? "Submitting Consultation Request..."

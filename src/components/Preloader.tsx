@@ -8,6 +8,11 @@ import { siteContent } from "@/data/siteContent";
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
 
+  const dismiss = () => {
+    document.body.classList.remove("is-loading");
+    setLoading(false);
+  };
+
   useEffect(() => {
     // Check prefers-reduced-motion
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -16,11 +21,13 @@ export default function Preloader() {
       return;
     }
 
-    // Let preloader display for original duration
+    // Faster on mobile (~950ms) to prevent perceived delay; keep desktop luxury feel
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const duration = isMobile ? 950 : 1500;
+
     const timer = setTimeout(() => {
-      document.body.classList.remove("is-loading");
-      setLoading(false);
-    }, 1500);
+      dismiss();
+    }, duration);
 
     // Fallback safety release so body never stays locked
     const safety = setTimeout(() => {
@@ -41,10 +48,11 @@ export default function Preloader() {
           key="preloader"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } }}
+          onClick={dismiss}
           onAnimationComplete={() => {
             document.body.classList.remove("is-loading");
           }}
-          className="fixed inset-0 w-full h-[100dvh] z-[99999] flex flex-col items-center justify-center bg-[#07080B] text-[#EDE8DF] select-none px-6"
+          className="fixed inset-0 w-full h-[100dvh] z-[99999] flex flex-col items-center justify-center bg-[#07080B] text-[#EDE8DF] select-none px-4 sm:px-6 cursor-pointer"
         >
           {/* Subtle ambient gold radial background */}
           <div className="absolute inset-0 bg-radial-dark opacity-60 pointer-events-none" />
@@ -53,17 +61,17 @@ export default function Preloader() {
             initial={{ scale: 0.85, opacity: 0, y: 15 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex flex-col items-center text-center px-4 sm:px-6 w-full max-w-[80vw] sm:max-w-sm"
+            className="relative flex flex-col items-center text-center px-2 sm:px-6 w-full max-w-[90vw] sm:max-w-sm"
           >
-            {/* Logo directly on dark preloader (no white box) - responsive with safe margins */}
-            <div className="relative mb-6 p-2 overflow-hidden w-full max-w-[85vw] sm:max-w-[380px] flex items-center justify-center">
-              <div className="relative aspect-[782/136] w-full max-w-[340px] sm:max-w-[380px]">
+            {/* Logo directly on dark preloader (no white box) - safe bounds on small 320px screens */}
+            <div className="relative mb-5 sm:mb-6 p-2 overflow-hidden w-full max-w-[280px] sm:max-w-[380px] flex items-center justify-center">
+              <div className="relative aspect-[782/136] w-full">
                 <Image
                   src="/assets/logo.png"
                   alt="Pranav Bansal - Real Estate Consultant"
                   fill
                   priority
-                  sizes="(max-width: 768px) 85vw, 380px"
+                  sizes="(max-width: 640px) 280px, 380px"
                   className="object-contain"
                 />
               </div>
