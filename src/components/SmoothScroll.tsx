@@ -5,12 +5,14 @@ import Lenis from "lenis";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Disable on touch devices (iOS / Android) or reduced motion to prevent scrolling jank
-    const isTouch =
-      window.matchMedia("(pointer: coarse)").matches ||
-      !window.matchMedia("(hover: hover)").matches;
+    // Disable on touch / mobile devices (iOS / Android / tablets) and reduced motion
+    const isMobileOrTouch =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(pointer: coarse)").matches ||
+       !window.matchMedia("(hover: hover)").matches ||
+       window.innerWidth < 1024);
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion || isTouch) return;
+    if (prefersReducedMotion || isMobileOrTouch) return;
 
     const lenis = new Lenis({
       duration: 1.2,

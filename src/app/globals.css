@@ -19,14 +19,24 @@ html {
   overflow-x: clip;
 }
 
+@supports not (overflow: clip) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 body {
   color: var(--foreground);
   background-color: var(--background);
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-  overflow-x: clip;
   selection-background-color: #C5A059;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+}
+
+/* Offset sections on anchor scroll so headings are never hidden behind fixed/sticky header */
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 ::selection {
